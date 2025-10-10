@@ -1,0 +1,59 @@
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+
+local ultimaPosicion = nil
+
+local function esPosicionValida(pos)
+	local ray = Ray.new(pos, Vector3.new(0, -20, 0))
+	local part = workspace:FindPartOnRay(ray)
+	return part ~= nil
+end
+
+local function reemplazarAnimacion(character)
+	local humanoid = character:FindFirstChildOfClass("Humanoid")
+	if not humanoid then return end
+
+	local animator = humanoid:FindFirstChildOfClass("Animator")
+	if not animator then
+		animator = Instance.new("Animator")
+		animator.Parent = humanoid
+	end
+
+	for _, track in pairs(animator:GetPlayingAnimationTracks()) do
+		if track.Animation and track.Animation.AnimationId == "rbxassetid://18715800557" then
+			track:Stop()
+		end
+	end
+
+	local anim = Instance.new("Animation")
+	anim.AnimationId = "rbxassetid://113201609340793"
+	local track = animator:LoadAnimation(anim)
+	track:Play()
+	anim:Destroy()
+end
+
+local function onCharacterAdded(character)
+	local hrp = character:WaitForChild("HumanoidRootPart")
+	local humanoid = character:WaitForChild("Humanoid")
+
+	if ultimaPosicion then
+		task.delay(0.2, function()
+			if hrp then
+				hrp.CFrame = CFrame.new(ultimaPosicion)
+				reemplazarAnimacion(character)
+			end
+		end)
+	end
+
+	humanoid.Died:Connect(function()
+		if hrp and esPosicionValida(hrp.Position) then
+			ultimaPosicion = hrp.Position
+		end
+	end)
+end
+
+player.CharacterAdded:Connect(onCharacterAdded)
+
+if player.Character then
+	onCharacterAdded(player.Character)
+end
