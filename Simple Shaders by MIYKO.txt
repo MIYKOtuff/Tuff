@@ -1,0 +1,73 @@
+--SIMPLE SHADERS
+
+local Lighting = game:GetService("Lighting")
+local MaterialService = game:GetService("MaterialService")
+local Workspace = game:GetService("Workspace")
+
+local BareBonesColors = {
+    BrickColor.new("Bright green"),
+    BrickColor.new("Bright blue"),
+    BrickColor.new("Bright yellow"),
+    BrickColor.new("Bright brown"),
+    BrickColor.new("Light stone grey")
+}
+
+Lighting.Ambient = Color3.fromRGB(180, 180, 180)
+Lighting.OutdoorAmbient = Color3.fromRGB(200, 200, 200)
+Lighting.Brightness = 3
+Lighting.FogEnd = 10000
+Lighting.FogColor = Color3.fromRGB(240, 240, 240)
+Lighting.EnvironmentDiffuseScale = 1
+Lighting.EnvironmentSpecularScale = 1
+Lighting.GlobalShadows = true
+Lighting.ClockTime = 14
+Lighting.ExposureCompensation = 0.2
+
+for _, mat in pairs(Enum.Material:GetEnumItems()) do
+    local override = Instance.new("MaterialVariant")
+    override.Parent = MaterialService
+    override.Name = tostring(mat) .. "_BareBones"
+    override.BaseMaterial = mat
+    override.ColorMap = nil
+    override.NormalMap = nil
+    override.StudsPerTile = 0
+    MaterialService:SetOverride(mat, override)
+end
+
+for _, obj in pairs(Workspace:GetDescendants()) do
+    if obj:IsA("BasePart") then
+        obj.Color = BareBonesColors[math.random(1, #BareBonesColors)].Color
+        obj.Material = Enum.Material.SmoothPlastic
+        obj.Reflectance = 0.05
+    end
+end
+
+local cc = Instance.new("ColorCorrectionEffect", Lighting)
+cc.Saturation = 0.4
+cc.Contrast = 0.3
+cc.Brightness = 0.05
+
+local bloom = Instance.new("BloomEffect", Lighting)
+bloom.Intensity = 0.4
+bloom.Threshold = 0.8
+bloom.Size = 56
+
+local dof = Instance.new("DepthOfFieldEffect", Lighting)
+dof.FarIntensity = 0.3
+dof.FocusDistance = 25
+dof.InFocusRadius = 60
+dof.NearIntensity = 0.1
+
+local rays = Instance.new("SunRaysEffect", Lighting)
+rays.Intensity = 0.3
+rays.Spread = 0.7
+
+local atm = Instance.new("Atmosphere", Lighting)
+atm.Density = 0.35
+atm.Offset = 0.25
+atm.Color = Color3.fromRGB(200, 200, 200)
+atm.Decay = Color3.fromRGB(120, 120, 120)
+atm.Glare = 0.3
+atm.Haze = 0.2
+
+print("✅ Simple Shaders")
