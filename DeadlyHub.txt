@@ -1,0 +1,1517 @@
+-- Carga de WindUI
+local WindUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/Footagesus/WindUI/main/dist/main.lua"))()
+
+-- Localización
+WindUI:Localization({
+    Enabled = true,
+    Prefix = "loc:",
+    DefaultLanguage = "en",
+    Translations = {
+        ["en"] = {
+            ["WELCOME"] = "By MIYKO",
+            ["IMAGEBRO"] = "DEADLYHUB",
+        }
+    }
+})
+
+WindUI.TransparencyValue = 0.2
+WindUI:SetTheme("Dark")
+
+-- Crear ventana
+local Window = WindUI:CreateWindow({
+    Title = "loc:IMAGEBRO",
+    Icon = "skull",
+    Author = "loc:WELCOME",
+    Size = UDim2.fromOffset(580, 415),
+})
+
+-- Crear sección principal
+local MainSection = Window:Section({ Title = "Main", Opened = true })
+
+-- Crear tabs
+local LimitedEmotesTab = MainSection:Tab({ Title = "Limited Emotes", Icon = "lock" })
+local FreeEmotesTab = MainSection:Tab({ Title = "Free Emotes", Icon = "unlock" })
+local DummyAnimationsTab = MainSection:Tab({ Title = "Dummy Animations", Icon = "user" })
+local ServerSettingsTab = MainSection:Tab({ Title = "Server Settings", Icon = "server" })
+local MIYKOTUFFTab = MainSection:Tab({ Title = "MIYKOTUFF", Icon = "star" })
+local IndicatorsTab = MainSection:Tab({ Title = "Indicators, Visuals & Cooldowns", Icon = "eye" })
+local SaitamaTab = MainSection:Tab({ Title = "Saitama", Icon = "bolt" })
+local GarouTab = MainSection:Tab({ Title = "Garou", Icon = "fist" })
+local SuyriuTab = MainSection:Tab({ Title = "Suyriu", Icon = "fire" })
+local AtomicSamuraiTab = MainSection:Tab({ Title = "Atomic Samurai", Icon = "sword" })
+local SonicTab = MainSection:Tab({ Title = "Sonic", Icon = "zap" })
+local HubsUITab = MainSection:Tab({ Title = "Hubs & UI", Icon = "grid" })
+local SongTab = MainSection:Tab({ Title = "Song of the Day", Icon = "music" })
+local GraphicsTab = MainSection:Tab({ Title = "Graphics, Fps and Quality", Icon = "tv" })
+local CreditsTab = MainSection:Tab({ Title = "Credits", Icon = "heart" })
+
+-- Botones de Limited Emotes
+LimitedEmotesTab:Button({
+    Title = "Final Spark (Kill Emote)",
+    Desc = "Yuji deidad",
+    Callback = function()
+        local p = game.Players.LocalPlayer
+local c, h = p.Character, p.Character:WaitForChild("Humanoid")
+local a = Instance.new("Animation")
+a.AnimationId = "rbxassetid://129361308786827"
+h:LoadAnimation(a):Play()
+local e = Instance.new("Accessory")
+e.Name = "#EmoteHolder_" .. math.random(1e5)
+e.Parent = c
+e:SetAttribute("EmoteProperty", true)
+require(game.ReplicatedStorage.Emotes.VFX):MainFunction{
+    Character = c,
+    vfxName = "Final Spark",
+    SpecificModule = game.ReplicatedStorage.Emotes.VFX,
+    AnimSent = 129361308786827,
+    RealBind = e
+}
+    end
+})
+
+LimitedEmotesTab:Button({
+    Title = "Final Stand",
+    Desc = "Gohan el poder regalado",
+    Callback = function()
+        local p = game.Players.LocalPlayer
+local c, h = p.Character, p.Character:WaitForChild("Humanoid")
+local a = Instance.new("Animation")
+a.AnimationId = "rbxassetid://113876851900426"
+h:LoadAnimation(a):Play()
+local e = Instance.new("Accessory")
+e.Name = "#EmoteHolder_" .. math.random(1e5)
+e.Parent = c
+e:SetAttribute("EmoteProperty", true)
+require(game.ReplicatedStorage.Emotes.VFX):MainFunction{
+    Character = c,
+    vfxName = "Final Stand",
+    SpecificModule = game.ReplicatedStorage.Emotes.VFX,
+    AnimSent = 113876851900426,
+    RealBind = e
+}
+    end
+})
+
+LimitedEmotesTab:Button({
+    Title = "True Aura",
+    Desc = "Mi emote favorito",
+    Callback = function()
+        local p = game.Players.LocalPlayer
+local c = p.Character or p.CharacterAdded:Wait()
+local h = c:WaitForChild("Humanoid")
+local a = Instance.new("Animation")
+a.AnimationId = "rbxassetid://103668868712"
+h:LoadAnimation(a):Play()
+local e = Instance.new("Accessory")
+e.Name = "#EmoteHolder_" .. math.random(1e5)
+e.Parent = c
+e:SetAttribute("EmoteProperty", true)
+require(game.ReplicatedStorage.Emotes.VFX):MainFunction{
+    Character = c,
+    vfxName = "True Aura",
+    SpecificModule = game.ReplicatedStorage.Emotes.VFX,
+    AnimSent = 103668868712,
+    RealBind = e
+}
+    end
+})
+
+LimitedEmotesTab:Button({
+    Title = "Last Will (Kill emote)",
+    Desc = "Mi kill emote fav",
+    Callback = function()
+        local p = game.Players.LocalPlayer
+local c, h = p.Character, p.Character:WaitForChild("Humanoid")
+local a = Instance.new("Animation")
+a.AnimationId = "rbxassetid://113450724032380"
+h:LoadAnimation(a):Play()
+local e = Instance.new("Accessory")
+e.Name = "#EmoteHolder_" .. math.random(1e5)
+e.Parent = c
+e:SetAttribute("EmoteProperty", true)
+require(game.ReplicatedStorage.Emotes.VFX):MainFunction{
+    Character = c,
+    vfxName = "Last Will",
+    SpecificModule = game.ReplicatedStorage.Emotes.VFX,
+    AnimSent = 113450724032380,
+    RealBind = e
+}
+    end
+})
+
+LimitedEmotesTab:Button({
+    Title = "Eternal Seal (No VFX)",
+    Desc = "solo es la animacion y el movimiento de la camara",
+    Callback = function()
+        local p = game.Players.LocalPlayer
+local c = p.Character or p.CharacterAdded:Wait()
+local h = c:WaitForChild("Humanoid")
+local a = Instance.new("Animation")
+a.AnimationId = "rbxassetid://100255267749203"
+h:LoadAnimation(a):Play()
+local e = Instance.new("Accessory")
+e.Name = "#EmoteHolder_" .. math.random(1e5)
+e.Parent = c
+e:SetAttribute("EmoteProperty", true)
+require(game.ReplicatedStorage.Emotes.VFX):MainFunction{
+    Character = c,
+    vfxName = "Eternal Seal",
+    SpecificModule = game.ReplicatedStorage.Emotes.VFX,
+    AnimSent = 100255267749203,
+    RealBind = e
+}
+    end
+})
+
+LimitedEmotesTab:Button({
+    Title = "Boundless Rage",
+    Desc = "El mob deidad",
+    Callback = function()
+local p = game.Players.LocalPlayer
+local c = p.Character or p.CharacterAdded:Wait()
+local h = c:WaitForChild("Humanoid")
+local a = Instance.new("Animation")
+a.AnimationId = "rbxassetid://107649573628906"
+h:LoadAnimation(a):Play()
+local e = Instance.new("Accessory")
+e.Name = "#EmoteHolder_" .. math.random(1e5)
+e.Parent = c
+e:SetAttribute("EmoteProperty", true)
+require(game.ReplicatedStorage.Emotes.VFX):MainFunction{
+    Character = c,
+    vfxName = "Boundless Rage",
+    SpecificModule = game.ReplicatedStorage.Emotes.VFX,
+    AnimSent = 107649573628906,
+    RealBind = e
+}
+    end
+})
+
+LimitedEmotesTab:Button({
+    Title = "Divine Form (bug)",
+    Desc = "de preferencia no lo vuelvas a ejecutar",
+    Callback = function()
+        local p = game.Players.LocalPlayer
+local c = p.Character or p.CharacterAdded:Wait()
+local h = c:WaitForChild("Humanoid")
+local a = Instance.new("Animation")
+a.AnimationId = "rbxassetid://116187503451999"
+h:LoadAnimation(a):Play()
+local e = Instance.new("Accessory")
+e.Name = "#EmoteHolder_" .. math.random(1e5)
+e.Parent = c
+e:SetAttribute("EmoteProperty", true)
+require(game.ReplicatedStorage.Emotes.VFX):MainFunction{
+    Character = c,
+    vfxName = "Divine Form",
+    SpecificModule = game.ReplicatedStorage.Emotes.VFX,
+    AnimSent = 116187503451999,
+    RealBind = e
+}
+    end
+})
+
+LimitedEmotesTab:Button({
+    Title = "Shadow Eruption",
+    Desc = "tiene de los mejores VFX",
+    Callback = function()
+        local p = game.Players.LocalPlayer
+local c = p.Character or p.CharacterAdded:Wait()
+local h = c:WaitForChild("Humanoid")
+local a = Instance.new("Animation")
+a.AnimationId = "rbxassetid://121032789756"
+h:LoadAnimation(a):Play()
+local e = Instance.new("Accessory")
+e.Name = "#EmoteHolder_" .. math.random(1e5)
+e.Parent = c
+e:SetAttribute("EmoteProperty", true)
+require(game.ReplicatedStorage.Emotes.VFX):MainFunction{
+    Character = c,
+    vfxName = "Shadow Eruption",
+    SpecificModule = game.ReplicatedStorage.Emotes.VFX,
+    AnimSent = 121032789756,
+    RealBind = e
+}
+    end
+})
+
+LimitedEmotesTab:Button({
+    Title = "Divine Form (Golden Head)",
+    Desc = "Musica culera",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/IdkRandomUsernameok/PublicAssets/refs/heads/main/Releases/MUI.lua"))()
+    end
+})
+
+LimitedEmotesTab:Button({
+    Title = "World Cutting Slash",
+    Desc = "con una de estas se petatearon al gojo",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Yourfavoriteguy/Sukunaslash/refs/heads/main/WorldCuttingSlash",true))()
+    end
+})
+
+LimitedEmotesTab:Button({
+    Title = "The Fallen",
+    Desc = "Sukumbia",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Yourfavoriteguy/Idka3/refs/heads/main/ehhehe",true))()
+    end
+})
+
+LimitedEmotesTab:Button({
+    Title = "Emerge but low edition",
+    Desc = "alch esta bien culero xd",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Yourfavoriteguy/HAHAHHA/refs/heads/main/EmergeButLow",true))()
+    end
+})
+
+-- Botones de Free Emotes
+FreeEmotesTab:Button({
+    Title = "Deneter los audios de los emotes",
+    Desc = "me duelen los oidos",
+    Callback = function()
+        local p = game.Players.LocalPlayer
+local c = p.Character or p.CharacterAdded:Wait()
+
+local ids = {
+	"rbxassetid://1836256328",
+	"rbxassetid://9056830251"
+}
+
+for _, obj in ipairs(c:GetDescendants()) do
+	if obj:IsA("Sound") then
+		for _, id in ipairs(ids) do
+			if string.find(obj.SoundId, id) then
+				obj:Stop()
+			end
+		end
+	end
+end
+    end
+})
+
+FreeEmotesTab:Button({
+    Title = "Pincel",
+    Desc = "idk",
+    Callback = function()
+        -- Pincel
+local p = game.Players.LocalPlayer
+local c = p.Character or p.CharacterAdded:Wait()
+local h = c:WaitForChild("Humanoid")
+
+local a = Instance.new("Animation")
+a.AnimationId = "rbxassetid://14611931363"
+h:LoadAnimation(a):Play()
+
+local s = Instance.new("Sound", c:WaitForChild("Head"))
+s.SoundId = "rbxassetid://14611940867"
+s:Play()
+    end
+})
+
+FreeEmotesTab:Button({
+    Title = "Ajustar",
+    Desc = "Epilepcia",
+    Callback = function()
+        -- Ajustar
+local p = game.Players.LocalPlayer
+local c = p.Character or p.CharacterAdded:Wait()
+local h = c:WaitForChild("Humanoid")
+
+local a = Instance.new("Animation")
+a.AnimationId = "rbxassetid://17266410350"
+h:LoadAnimation(a):Play()
+
+local s = Instance.new("Sound", c:WaitForChild("Head"))
+s.SoundId = "rbxassetid://1836256328"
+s:Play()
+    end
+})
+
+FreeEmotesTab:Button({
+    Title = "Caida",
+    Desc = "Paro cardiaco",
+    Callback = function()
+        -- Caída
+local p = game.Players.LocalPlayer
+local c = p.Character or p.CharacterAdded:Wait()
+local h = c:WaitForChild("Humanoid")
+
+local a = Instance.new("Animation")
+a.AnimationId = "rbxassetid://17107937300"
+h:LoadAnimation(a):Play()
+
+local s = Instance.new("Sound", c:WaitForChild("HumanoidRootPart"))
+s.SoundId = "rbxassetid://17107935019"
+s:Play()
+
+local e = Instance.new("Accessory")
+e.Name = "#EmoteHolder_"..math.random(1e5)
+e.Parent = c
+e:SetAttribute("EmoteProperty", true)
+require(game.ReplicatedStorage.Emotes.VFX):MainFunction{
+    Character = c,
+    vfxName = "Caída",
+    SpecificModule = game.ReplicatedStorage.Emotes.VFX,
+    AnimSent = 17107937300,
+    RealBind = e
+}
+    end
+})
+
+FreeEmotesTab:Button({
+    Title = "Explocion",
+    Desc = "disparo",
+    Callback = function()
+        -- Explosión
+local p = game.Players.LocalPlayer
+local c = p.Character or p.CharacterAdded:Wait()
+local h = c:WaitForChild("Humanoid")
+
+local a = Instance.new("Animation")
+a.AnimationId = "rbxassetid://16746824621"
+h:LoadAnimation(a):Play()
+
+local s = Instance.new("Sound", c:WaitForChild("HumanoidRootPart"))
+s.SoundId = "rbxassetid://16746816646"
+s:Play()
+
+local e = Instance.new("Accessory")
+e.Name = "#EmoteHolder_"..math.random(1e5)
+e.Parent = c
+e:SetAttribute("EmoteProperty", true)
+require(game.ReplicatedStorage.Emotes.VFX):MainFunction{
+    Character = c,
+    vfxName = "Explosión",
+    SpecificModule = game.ReplicatedStorage.Emotes.VFX,
+    AnimSent = 16746824621,
+    RealBind = e
+}
+    end
+})
+
+FreeEmotesTab:Button({
+    Title = "Beneath Me (Kill Emote)",
+    Desc = "toxic",
+    Callback = function()
+        -- Kill Emote 1
+local p = game.Players.LocalPlayer
+local c = p.Character or p.CharacterAdded:Wait()
+local h = c:WaitForChild("Humanoid")
+
+local a = Instance.new("Animation")
+a.AnimationId = "rbxassetid://134934729128196"
+h:LoadAnimation(a):Play()
+
+local s = Instance.new("Sound", c:WaitForChild("Head"))
+s.SoundId = "rbxassetid://106138436425034"
+s:Play()
+
+local e = Instance.new("Accessory")
+e.Name = "#EmoteHolder_"..math.random(1e5)
+e.Parent = c
+e:SetAttribute("EmoteProperty", true)
+require(game.ReplicatedStorage.Emotes.VFX):MainFunction{
+    Character = c,
+    vfxName = "Beneath Me",
+    SpecificModule = game.ReplicatedStorage.Emotes.VFX,
+    AnimSent = 134934729128196,
+    RealBind = e
+}
+    end
+})
+
+FreeEmotesTab:Button({
+    Title = "IDK (reir)",
+    Desc = "diganme el nombre pls",
+    Callback = function()
+        -- Reír
+local p = game.Players.LocalPlayer
+local c = p.Character or p.CharacterAdded:Wait()
+local h = c:WaitForChild("Humanoid")
+
+local a = Instance.new("Animation")
+a.AnimationId = "rbxassetid://8887084105"
+h:LoadAnimation(a):Play()
+
+local s = Instance.new("Sound", c:WaitForChild("Head"))
+s.SoundId = "rbxassetid://9056830251"
+s:Play()
+    end
+})
+
+FreeEmotesTab:Button({
+    Title = "Embers (kill emote)",
+    Desc = "Mi kill emote free favorito",
+    Callback = function()
+        -- Embers
+local p = game.Players.LocalPlayer
+local c = p.Character or p.CharacterAdded:Wait()
+local h = c:WaitForChild("Humanoid")
+
+local a = Instance.new("Animation")
+a.AnimationId = "rbxassetid://83905432418191"
+h:LoadAnimation(a):Play()
+
+local e = Instance.new("Accessory")
+e.Name = "#EmoteHolder_"..math.random(1e5)
+e.Parent = c
+e:SetAttribute("EmoteProperty", true)
+require(game.ReplicatedStorage.Emotes.VFX):MainFunction{
+    Character = c,
+    vfxName = "Embers",
+    SpecificModule = game.ReplicatedStorage.Emotes.VFX,
+    AnimSent = 83905432418191,
+    RealBind = e
+}
+    end
+})
+
+FreeEmotesTab:Button({
+    Title = "Time Shift (kill emote)",
+    Desc = "jojos referencia",
+    Callback = function()
+         -- Time Shift
+local p = game.Players.LocalPlayer
+local c = p.Character or p.CharacterAdded:Wait()
+local h = c:WaitForChild("Humanoid")
+
+local a = Instance.new("Animation")
+a.AnimationId = "rbxassetid://114451374603244"
+h:LoadAnimation(a):Play()
+
+local e = Instance.new("Accessory")
+e.Name = "#EmoteHolder_"..math.random(1e5)
+e.Parent = c
+e:SetAttribute("EmoteProperty", true)
+require(game.ReplicatedStorage.Emotes.VFX):MainFunction{
+    Character = c,
+    vfxName = "Time Shift",
+    SpecificModule = game.ReplicatedStorage.Emotes.VFX,
+    AnimSent = 114451374603244,
+    RealBind = e
+}
+    end
+})
+
+-- Botones de Dummy Animations
+DummyAnimationsTab:Button({
+    Title = "Last Will",
+    Desc = "se ve epico",
+    Callback = function()
+        local dummy = game.Workspace.Live["Weakest Dummy"]
+local humanoid = dummy:WaitForChild("Humanoid")
+local anim = Instance.new("Animation")
+anim.AnimationId = "rbxassetid://113450724032380"
+humanoid:LoadAnimation(anim):Play()
+local accessory = Instance.new("Accessory")
+accessory.Name = "#EmoteHolder_" .. math.random(1e5)
+accessory.Parent = dummy
+accessory:SetAttribute("EmoteProperty", true)
+require(game.ReplicatedStorage.Emotes.VFX):MainFunction{
+    Character = dummy,
+    vfxName = "Last Will",
+    SpecificModule = game.ReplicatedStorage.Emotes.VFX,
+    AnimSent = 113450724032380,
+    RealBind = accessory
+}
+    end
+})
+
+DummyAnimationsTab:Button({
+    Title = "Counter",
+    Desc = "ponte enfrente del dummy",
+    Callback = function()
+        local function playAnim(character, animId)
+    local humanoid = character:WaitForChild("Humanoid")
+    local anim = Instance.new("Animation")
+    anim.AnimationId = "rbxassetid://" .. animId
+    humanoid:LoadAnimation(anim):Play()
+end
+local player = game.Players.LocalPlayer
+playAnim(player.Character or player.CharacterAdded:Wait(), 18440398084)
+local dummy = game.Workspace.Live["Weakest Dummy"]
+playAnim(dummy, 18440406788)
+    end
+})
+
+DummyAnimationsTab:Button({
+    Title = "Eternal Seal",
+    Desc = "ponte atras del dummy",
+    Callback = function()
+        local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local anim = Instance.new("Animation")
+anim.AnimationId = "rbxassetid://100255267749203"
+humanoid:LoadAnimation(anim):Play()
+local accessory = Instance.new("Accessory")
+accessory.Name = "#EmoteHolder_" .. math.random(1e5)
+accessory.Parent = character
+accessory:SetAttribute("EmoteProperty", true)
+require(game.ReplicatedStorage.Emotes.VFX):MainFunction{
+Character = character,
+vfxName = "Eternal Seal",
+SpecificModule = game.ReplicatedStorage.Emotes.VFX,
+AnimSent = 100255267749203,
+RealBind = accessory
+}
+local dummy = game.Workspace.Live["Weakest Dummy"]
+local dummyHumanoid = dummy:WaitForChild("Humanoid")
+local dummyAnim = Instance.new("Animation")
+dummyAnim.AnimationId = "rbxassetid://74819612786417"
+dummyHumanoid:LoadAnimation(dummyAnim):Play()
+local dummyAccessory = Instance.new("Accessory")
+dummyAccessory.Name = "#EmoteHolder_" .. math.random(1e5)
+dummyAccessory.Parent = dummy
+dummyAccessory:SetAttribute("EmoteProperty", true)
+require(game.ReplicatedStorage.Emotes.VFX):MainFunction{
+Character = dummy,
+vfxName = "Eternal Seal",
+SpecificModule = game.ReplicatedStorage.Emotes.VFX,
+AnimSent = 74819612786417,
+RealBind = dummyAccessory
+}
+})
+
+DummyAnimationsTab:Button({
+    Title = "KJ Ult",
+    Desc = "oh no",
+    Callback = function()
+        local player = game.Workspace.Live["Weakest Dummy"]
+repeat wait() until player.Humanoid
+local dummyhumanoid = game.Workspace.Live["Weakest Dummy"]["Humanoid"]
+
+local soundeffect = Instance.new("Sound")
+soundeffect.SoundId = "rbxassetid://17150550559"
+soundeffect.Parent = game.Workspace.Live["Weakest Dummy"]["Torso"]
+soundeffect:Play()
+soundeffect.Volume = 3
+
+local soundeffect = Instance.new("Sound")
+soundeffect.SoundId = "rbxassetid://17150550302"
+soundeffect.Parent = game.Workspace.Live["Weakest Dummy"]["Torso"]
+soundeffect:Play()
+soundeffect.Volume = 5
+
+local anim2 = Instance.new("Animation")
+anim2.AnimationId = "rbxassetid://17140902079"
+
+local playAnim2 = dummyhumanoid:LoadAnimation(anim2)
+playAnim2:Play()
+
+local fine = game.ReplicatedStorage.Resources.KJEffects["fine...1"].EnableBatch2:Clone()
+fine.Parent = game.Workspace.Live["Weakest Dummy"]["Torso"]
+    for _, child in ipairs(fine:GetChildren()) do
+        if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
+            child:Emit(1) -- Emit 20 particles
+        end
+    end
+local fine3 = game.ReplicatedStorage.Resources.KJEffects["fine...Emit"].EmitBatch3:Clone()
+fine3.Parent = game.Workspace.Live["Weakest Dummy"]["Torso"]
+    for _, child in ipairs(fine3:GetChildren()) do
+        if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
+            child:Emit(1) -- Emit 20 particles
+        end
+    end
+local red = game.ReplicatedStorage.Resources.KJEffects["fine...1"].REDDDD1:Clone()
+red.Parent = game.Workspace.Live["Weakest Dummy"]["Right Leg"]
+    for _, child in ipairs(red:GetChildren()) do
+        if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
+            child:Emit(1) -- Emit 20 particles
+        end
+    end
+local red2 = game.ReplicatedStorage.Resources.KJEffects["fine...1"].REDDDD2:Clone()
+red2.Parent = game.Workspace.Live["Weakest Dummy"]["Left Leg"]
+    for _, child in ipairs(red2:GetChildren()) do
+        if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
+            child:Emit(1) -- Emit 20 particles
+        end
+    end
+local red3 = game.ReplicatedStorage.Resources.KJEffects["fine...1"].REDDDD3:Clone()
+red3.Parent = game.Workspace.Live["Weakest Dummy"]["Left Leg"]
+    for _, child in ipairs(red3:GetChildren()) do
+        if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
+            child:Emit(1) -- Emit 20 particles
+        end
+    end
+local red4 = game.ReplicatedStorage.Resources.KJEffects["fine...1"].REDDDD4:Clone()
+red4.Parent = game.Workspace.Live["Weakest Dummy"]["Right Leg"]
+    for _, child in ipairs(red4:GetChildren()) do
+        if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
+            child:Emit(1) -- Emit 20 particles
+        end
+    end
+wait(8.2)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+fine:Destroy()
+red:Destroy()
+red2:Destroy()
+red3:Destroy()
+red4:Destroy()
+local fine2 = game.ReplicatedStorage.Resources.KJEffects["fine...Emit2"].EmitBatch1:Clone()
+fine2.Parent = game.Workspace.Live["Weakest Dummy"]["Right Arm"]
+    for _, child in ipairs(fine2:GetChildren()) do
+        if child:IsA("ParticleEmitter") then -- Check if the child is a ParticleEmitter
+            child:Emit(1) -- Emit 20 particles
+        end
+    end
+    end
+})
+
+-- Botones de Server Settings
+ServerSettingsTab:Button({
+    Title = "Rejoin",
+    Desc = "rj",
+    Callback = function()
+        local TeleportService = game:GetService("TeleportService")
+	local Players = game:GetService("Players")
+	local LocalPlayer = Players.LocalPlayer
+	
+	local Rejoin = coroutine.create(function()
+		local Success, ErrorMessage = pcall(function()
+			TeleportService:Teleport(game.PlaceId, LocalPlayer)
+		end)
+	
+		if ErrorMessage and not Success then
+			warn(ErrorMessage)
+		end
+	end)
+	
+	coroutine.resume(Rejoin)
+    end
+})
+
+ServerSettingsTab:Button({
+    Title = "Server Hop",
+    Desc = "sh",
+    Callback = function()
+        local PlaceID = game.PlaceId
+	local AllIDs = {}
+	local foundAnything = ""
+	local actualHour = os.date("!*t").hour
+	local Deleted = false
+	local File = pcall(function()
+		AllIDs = game:GetService('HttpService'):JSONDecode(readfile("NotSameServers.json"))
+	end)
+	if not File then
+		table.insert(AllIDs, actualHour)
+		writefile("NotSameServers.json", game:GetService('HttpService'):JSONEncode(AllIDs))
+	end
+	function TPReturner()
+		local Site;
+		if foundAnything == "" then
+			Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100'))
+		else
+			Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100&cursor=' .. foundAnything))
+		end
+		local ID = ""
+		if Site.nextPageCursor and Site.nextPageCursor ~= "null" and Site.nextPageCursor ~= nil then
+			foundAnything = Site.nextPageCursor
+		end
+		local num = 0;
+		for i,v in pairs(Site.data) do
+			local Possible = true
+			ID = tostring(v.id)
+			if tonumber(v.maxPlayers) > tonumber(v.playing) then
+				for _,Existing in pairs(AllIDs) do
+					if num ~= 0 then
+						if ID == tostring(Existing) then
+							Possible = false
+						end
+					else
+						if tonumber(actualHour) ~= tonumber(Existing) then
+							local delFile = pcall(function()
+								delfile("NotSameServers.json")
+								AllIDs = {}
+								table.insert(AllIDs, actualHour)
+							end)
+						end
+					end
+					num = num + 1
+				end
+				if Possible == true then
+					table.insert(AllIDs, ID)
+					wait()
+					pcall(function()
+						writefile("NotSameServers.json", game:GetService('HttpService'):JSONEncode(AllIDs))
+						wait()
+						game:GetService("TeleportService"):TeleportToPlaceInstance(PlaceID, ID, game.Players.LocalPlayer)
+					end)
+					wait(4)
+				end
+			end
+		end
+	end
+
+	function Teleport()
+		while wait() do
+			pcall(function()
+				TPReturner()
+				if foundAnything ~= "" then
+					TPReturner()
+				end
+			end)
+		end
+	end
+	Teleport()
+    end
+})
+
+ServerSettings:Dropdown({
+    Title = "Teleport to Player",
+    Values = {"No players available"},
+    Value = "Select a player",
+    Callback = function(selectedPlayer)
+        local Players = game:GetService("Players")
+        local LocalPlayer = Players.LocalPlayer
+
+        local targetPlayer = Players:FindFirstChild(selectedPlayer)
+        if targetPlayer and targetPlayer.Character and LocalPlayer.Character then
+            local targetChar = targetPlayer.Character
+            local humanoidRootPart = targetChar:FindFirstChild("HumanoidRootPart")
+            local localRootPart = LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+
+            if humanoidRootPart and localRootPart then
+                localRootPart.CFrame = humanoidRootPart.CFrame
+            end
+        end
+    end
+})
+
+ServerSettings:Dropdown({
+    Title = "Teleport Locations",
+    Values = { "Death Counter Room", "Atomic Room", "Baseplate", "Mountain 1", "Mountain 2", "Mountain 3" },
+    Value = "Select Location",
+    Callback = function(option) 
+        local player = game.Players.LocalPlayer
+        local character = player.Character or player.CharacterAdded:Wait()
+        local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+        
+        if option == "Death Counter Room" then
+            humanoidRootPart.CFrame = CFrame.new(-92, 29, 20347)
+        elseif option == "Atomic Room" then
+            humanoidRootPart.CFrame = CFrame.new(1079, 155, 23003)
+        elseif option == "Baseplate" then
+            humanoidRootPart.CFrame = CFrame.new(968, 20, 23088)
+        elseif option == "Mountain 1" then
+            humanoidRootPart.CFrame = CFrame.new(266, 699, 458)
+        elseif option == "Mountain 2" then
+            humanoidRootPart.CFrame = CFrame.new(551, 630, -265)
+        elseif option == "Mountain 3" then
+            humanoidRootPart.CFrame = CFrame.new(-107, 642, -328)
+        end
+    end
+})
+
+-- Botones de MIYKOTUFF
+MIYKOTUFFTab:Button({
+    Title = "Build",
+    Desc = "oke",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/MIYKOtuff/Tuff/refs/heads/main/BUILDER%20MODE%20V1%20(1).txt'))()
+    end
+})
+
+MIYKOTUFFTab:Button({
+    Title = "Revive",
+    Desc = "yep",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/MIYKOtuff/Tuff/refs/heads/main/Relive%20script%20by%20MIYKO.txt"))()
+    end
+})
+
+-- Botones de Indicators, Visuals & Cooldowns
+IndicatorsTab:Button({
+    Title = "Free Search Bar",
+    Desc = "Creo que es un gamepass",
+    Callback = function()
+        local Players = game:GetService("Players")
+        local localPlayer = Players.LocalPlayer
+        localPlayer:SetAttribute("EmoteSearchBar", state)
+    end
+})
+
+IndicatorsTab:Button({
+    Title = "Extra Slots (Gamepass)",
+    Desc = "Emotiza insana",
+    Callback = function()
+        local Players = cloneref(game:GetService('Players'))
+local lplr = Players.LocalPlayer
+
+
+lplr:SetAttribute('ExtraSlots', true)
+lplr:SetAttribute('VIPServer', true)
+    end
+})
+
+IndicatorsTab:Button({
+    Title = "Characters ESP",
+    Desc = "Ver el personaje de los demas",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ArchIsDead/Arch-Vault/refs/heads/main/tsb-char-esp.lua"))()
+    end
+})
+
+IndicatorsTab:Button({
+    Title = "Dash Coldown Viewer",
+    Desc = "ver el coldown de los dashes",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ArchIsDead/Arch-Vault/refs/heads/main/dash-cooldown-ui.lua"))()
+    end
+})
+
+IndicatorsTab:Button({
+    Title = "Buy Limited Emotes",
+    Desc = "compralos antes de que esten en stock",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ArchIsDead/Arch-Vault/refs/heads/main/buy-unreleased-emote.lua"))()
+    end
+})
+
+IndicatorsTab:Button({
+    Title = "Ping ESP",
+    Desc = "Ver el ping de todos",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ArchIsDead/Arch-Vault/refs/heads/main/ping-esp.lua"))()
+    end
+})
+
+IndicatorsTab:Button({
+    Title = "Gojo punch effects",
+    Desc = "una vez activados ya no se pueden desactivar",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/r3k33551-bot/Acortador-de-scripts/refs/heads/main/gojos%20infinity.txt"))()
+    end
+})
+
+IndicatorsTab:Button({
+    Title = "Crab boss (ps+)",
+    Desc = "solo funciona en servidores privados",
+    Callback = function()
+        game:GetService("Players").LocalPlayer.Character.Communicate:FireServer({Goal = 'Change Character',Character = 'Crab Boss'})
+    end
+})
+
+IndicatorsTab:Button({
+    Title = "Hide Indicators",
+    Desc = "Ocultar indicadores",
+    Callback = function() end
+})
+
+-- Botones de Saitama
+SaitamaTab:Button({
+    Title = "Gojo V2",
+    Desc = "El mejor moveset de gojo actualmente",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-The-Strongest-Battleground-Gojo-manga-Tsb-30660"))()
+    end
+})
+
+SaitamaTab:Button({
+    Title = "Sukuna",
+    Desc = "tiene unas animaciones y mecanicas bien epicas",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/damir512/whendoesbrickdie/main/tspno.txt",true))()
+    end
+})
+
+SaitamaTab:Button({
+    Title = "Hakari",
+    Desc = "desgraciadamente no tiene el Tuca Donka :(",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastefy.app/R9YJF35g/raw"))();
+    end
+})
+
+SaitamaTab:Button({
+    Title = "Itadori x Sukuna",
+    Desc = "Bruh esta madre hace que la ulti sea imposible de fallar",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/The-Strongest-Battlegrounds-tsb-yuji-x-sukuna-script-NOT-MINE-31459"))()
+    end
+})
+
+SaitamaTab:Button({
+    Title = "Mahito",
+    Desc = "pues no hay mucho que decir, es un moveset muy generico",
+    Callback = function()
+        getgenv().Swordm1= true -- set trueif you want have sword thing on mahito m1
+getgenv().night = false  -- set true if you want night 
+getgenv().plushie = false ---set true if you want plushie mahito 
+getgenv().blackflash = true ---set true if you want v1 truly black flash
+getgenv().chat = false ---set true if you visual to other pov that your mahito
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Kenjihin69/Kenjihin69/refs/heads/main/Mahito%20v2%20sigma%20tp%20exploit'))()
+    end
+})
+
+SaitamaTab:Button({
+    Title = "Gojo JJS",
+    Desc = "Es lo mas cercano a un port de jjs a tsb",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/damir512/jjsgojov3/main/SaitamaToGojoV3_SOURCE-obfuscated_2.txt",true))()
+    end
+})
+
+SaitamaTab:Button({
+    Title = "Anti Spiral",
+    Desc = "las tools le dan su esencia",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/sparksnaps/Anti-Spiral./refs/heads/main/Lua"))()
+    end
+})
+
+SaitamaTab:Button({
+    Title = "Saitama Overhaul",
+    Desc = "Es de los creadores de Gojo v2",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/skibiditoiletfan2007/SaitamaOverhaul/refs/heads/main/Latest.lua"))()
+    end
+})
+
+SaitamaTab:Button({
+    Title = "Orbitical Warrior",
+    Desc = "Saitama Moveset Generico #999",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/AeryAlex/Scripts/refs/heads/main/Orbitical%20Warrior%20(Obsfucted).lua"))()
+    end
+})
+
+SaitamaTab:Button({
+    Title = "Dummy",
+    Desc = "Está chistoso xd",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/bNQvUpez"))();
+    end
+})
+
+SaitamaTab:Button({
+    Title = "Lightning Max",
+    Desc = "epicardo moveset todo inecesario",
+    Callback = function()
+        getgenv().Settings = {
+    AutoReinitializeOnSpawn = false,
+    Core = {
+        CheckForFunctions = true,
+        DefaultAnimationFadeOut = 0.2,
+        DefaultSoundVolume = 1,
+        DefaultSoundPitch = 1,
+        StopSoundWithAnimation = false,
+        EnableStreakNotifications = true
+    },
+    Visuals_Trail = {
+        Enabled = true,
+        Texture = "rbxassetid://15412407507",
+        Lifetime = 0.3,
+        EmissionStopDelay = 0.4,
+        BaseWidth = 15,
+        Color = ColorSequence.new(Color3.fromRGB(255, 255, 180)),
+        Transparency = NumberSequence.new({
+            NumberSequenceKeypoint.new(0, 0.2),
+            NumberSequenceKeypoint.new(0.2, 0.3),
+            NumberSequenceKeypoint.new(1, 0.3)
+        }),
+        WidthScale = NumberSequence.new({
+            NumberSequenceKeypoint.new(0, 6.73),
+            NumberSequenceKeypoint.new(0.642, 2.59),
+            NumberSequenceKeypoint.new(1, 0)
+        })
+    },
+    Interface = {
+        EnableTextAnimations = true,
+        TextAnimationCharacterDelay = 0.04,
+        UltimateBarLabel = "LIGHTING MODE",
+        UltimateKeybindHint = "[G]",
+        PrimaryThemeColor = Color3.fromRGB(255, 255, 197),
+        InterfaceFont = Enum.Font.GothamBold,
+        TopbarIcon = {
+            Image = "rbxassetid://98053281759624",
+            GlowColor = Color3.fromRGB(255, 227, 71),
+            Label = "Lumino Blitz"
+        }
+    },
+    AbilityNames = {
+        Normal = {
+            "Photon O- Kick",
+            "Consecutive Kicks",
+            "Sweep Kick",
+            "O- Floor Buster"
+        },
+        Ultimate = { --No Ult For Now
+            "Lighting Counter",
+            "Blitz Flip",
+            "Lightspeed Punch",
+            "Finishing Blow"
+        }
+    },
+    Music = {
+        Enabled = true,
+        SoundId = "rbxassetid://132347366936691",
+        Volume = 0.4
+    }
+}
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/PhNSecretAgent/LightingMaxY/refs/heads/main/LuaU.lua"))()
+    end
+})
+
+SaitamaTab:Button({
+    Title = "KJ",
+    Desc = "Tambien de los creadores de Gojo v2, el mejor kj",
+    Callback = function()
+        getgenv().Moveset_Settings = {
+    ["ExecuteOnRespawn"] = true, --// If true, the moveset will load everytime you respawn
+
+    ["TSBStyleNotification"] = true, --// If true, uses the TSB notification when you spawn in with KJ
+
+    ["UseOldCollateralRuin"] = true, --// If true, uses the old Collateral Ruin VFX and SFX
+
+    ["NoWarning"] = true, --// If true, removes the warning that appears when you're not on Saitama
+    ["NoDeathCounterImages"] = false, --// If true, will disable the images that appear in death counter slap
+    ["NoBarrageArms"] = false, --// If true, will destroy the barrage arms that appear when you use consecutive punch
+    ["NoPreysPerilAttract"] = true, --// If true, preys peril will not be able to attract you.
+    ["NoWalls"] = false,
+    ["NoTrees"] = false,
+
+    ["RavageTool"] = true,
+    ["AdrenalineBoostTool"] = true,
+    ["Adrenaline_Multiplier"] = 2, --// how much adrenaline multiplies your speed by
+
+    ["CustomUppercutAnimation"] = true,
+    ["CustomDownslamAnimation"] = true,
+    ["CustomIdleAnimation"] = true,
+
+    ["UltNames"] = {
+        "20 SERIES",
+        "COME AT ME",
+        "I'M DONE",
+    },
+
+    ["MoveNames"] = {
+        ["Normal Punch"] = "Ravaging Kick",
+        ["Consecutive Punches"] = "Fist Fusillade",
+        ["Shove"] = "Swift Sweep",
+        ["Uppercut"] = "Collateral Storm",
+
+        ["Death Counter"] = "Sudden Strike",
+        ["Table Flip"] = "Stoic Bomb",
+        ["Serious Punch"] = "Destructive Power",
+        ["Omni Directional Punch"] = "Omni Directional Fists"
+    },
+}
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/skibiditoiletfan2007/BaldyToKJ/refs/heads/main/Latest.lua"))()
+    end
+})
+
+SaitamaTab:Button({
+    Title = "Mafioso",
+    Desc = "creo que este personaje es de Forsaken",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Lovelymoonlight/Lovelymoonlight/refs/heads/main/Baldy%20to%20mafioso'))()
+    end
+})
+
+SaitamaTab:Button({
+    Title = "Sans / Trans",
+    Desc = "Yo a punto de pasar un mal rato mientras espero mi mortadela",
+    Callback = function()
+        loadstring(game:HttpGet("https://paste.ee/r/rF9d3"))()
+    end
+})
+
+SaitamaTab:Button({
+    Title = "Wally West",
+    Desc = "la verdadera speed force",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Nova2ezz/west/refs/heads/main/Protected_4638864115822087.lua.txt"))()
+    end
+})
+
+SaitamaTab:Button({
+    Title = "Gojo x Sukuna",
+    Desc = "No VFX",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/r3k33551-bot/Acortador-de-scripts/refs/heads/main/Gojo%20and%20Sukuna%20in%20one.txt"))()
+    end
+})
+
+-- Botones de Garou
+GarouTab:Button({
+    Title = "Sung Suho",
+    Desc = "no se nada de esta madre",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/sparksnaps/Sung-Suho/refs/heads/main/Lua"))()
+    end
+})
+
+GarouTab:Button({
+    Title = "Akaza",
+    Desc = "no se",
+    Callback = function()
+        loadstring(game:HttpGet("https://paste.ee/r/zzvAH"))()
+    end
+})
+
+GarouTab:Button({
+    Title = "Okarun",
+    Desc = "No se",
+    Callback = function()
+        loadstring(game:HttpGet"https://paste.ee/r/Pn4oj")()
+    end
+})
+
+GarouTab:Button({
+    Title = "Deku",
+    Desc = "No se",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/xKextYP5"))()
+    end
+})
+
+GarouTab:Button({
+    Title = "Star Glicher",
+    Desc = "No se",
+    Callback = function()
+        loadstring(game:HttpGet("https://paste.ee/r/mmQkO"))()
+    end
+})
+
+GarouTab:Button({
+    Title = "Kizaru",
+    Desc = "xd no se",
+    Callback = function()
+        loadstring(game:HttpGet("https://paste.ee/r/NPnfk"))()
+    end
+})
+
+GarouTab:Button({
+    Title = "Gojo (only attack effects)",
+    Desc = "creo que tambien cambia el aura de los m1s",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/S1gmaGuy/MyWifiSoBad/refs/heads/main/Garou%20to%20Gojo"))()
+    end
+})
+
+GarouTab:Button({
+    Title = "Goku",
+    Desc = "No se xddd",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/The-Strongest-Battlegrounds-Hero-hunter-moveset-into-OP-goku-moveset-17468"))()
+    end
+})
+
+GarouTab:Button({
+    Title = "Deku Vigilante",
+    Desc = "Este si se, esta bien reaton",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/The-Strongest-Battlegrounds-Vigilante-Deku-Moveset-22700"))()
+    end
+})
+
+-- Botones de Suyriu
+SuyriuTab:Button({
+    Title = "Gojo",
+    Desc = "uff mejor cagada",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/PlexTheOne/TSB/refs/heads/main/GojoSatoru.lua"))()
+    end
+})
+
+SuyriuTab:Button({
+    Title = "Deku",
+    Desc = "Muy forzadas las animaciones",
+    Callback = function()
+        loadstring(game:HttpGet("https://github.com/aggiealledge/obfuscated-scripts/raw/refs/heads/main/deku%20suiryu%20thingy.txt"))()
+    end
+})
+
+-- Botones de Atomic Samurai
+AtomicSamuraiTab:Button({
+    Title = "Dark Lord",
+    Desc = "es el stickman mamalon w",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Qaiddanial2904/Main/refs/heads/main/Dark%20lord"))()
+    end
+})
+
+AtomicSamuraiTab:Button({
+    Title = "Toji",
+    Desc = "Lo hicieron con weba xd",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/SiS57Qj6"))()
+    end
+})
+
+-- Botones de Sonic
+SonicTab:Button({
+    Title = "True Sonic",
+    Desc = "Modo ez",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/AeryAlex/Scripts/refs/heads/main/True-Sonic%20(OBSFUCTED).lua"))();
+    end
+})
+
+SonicTab:Button({
+    Title = "1x1x1x1",
+    Desc = "che bodrio",
+    Callback = function()
+        loadstring(game:HttpGet("https://gist.githubusercontent.com/GoldenHeads2/900e87ffc32f3c740930ccb106dd6abf/raw/358c5bf0f0a6aa25946718288dab006e3ae7e1d4/gistfile1.txt"))()
+    end
+})
+
+-- Botones de Hubs & UI
+HubsUITab:Button({
+    Title = "Old Emote hub by me",
+    Desc = "mierdota",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/MIYKOtuff/Tuff/refs/heads/main/EMOTE%20HUB%20(50-100)%20(1).txt'))()
+    end
+})
+
+HubsUITab:Button({
+    Title = "Old EBHUB by me",
+    Desc = "Key: IDK",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/r3k33551-bot/Acortador-de-scripts/refs/heads/main/EBHUBR%20V7.txt"))()
+    end
+})
+
+HubsUITab:Button({
+    Title = "Emote UI",
+    Desc = "epico",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Cyborg883/EmoteGui/refs/heads/main/Protected_4900496055951847.lua"))()
+    end
+})
+
+HubsUITab:Button({
+    Title = "Animations ui",
+    Desc = "trolleo con las ultis xd",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Mautiku/ehh/main/strong%20guest.lua.txt'))()
+    end
+})
+
+HubsUITab:Button({
+    Title = "White Beard",
+    Desc = "Es un hub para usar al barba blanca",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Tariviste/Scripts/refs/heads/main/Whitebeard%20Script%20TSB"))()
+    end
+})
+
+HubsUITab:Button({
+    Title = "Tech Hub",
+    Desc = "no se we",
+    Callback = function()
+        loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\75\105\101\116\98\97\47\75\105\101\116\98\97\47\114\101\102\115\47\104\101\97\100\115\47\109\97\105\110\47\77\121\37\50\48\103\117\105\37\50\48\105\110\116\114\111\34\41\41\40\41")()
+    end
+})
+
+HubsUITab:Button({
+    Title = "Blox Trap",
+    Desc = "jodido",
+    Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/qwertyui-is-back/Bloxstrap/main/Initiate.lua'), 'lol')()
+    end
+})
+
+HubsUITab:Button({
+    Title = "something hub",
+    Desc = "KEY: CRAZY BATTLEGROUNDS",
+    Callback = function()
+loadstring(game:HttpGet("https://rawscripts.net/raw/The-Strongest-Battlegrounds-The-strongest-battleground-50830"))()
+    end
+})
+
+HubsUITab:Button({
+    Title = "Auto Combos UI",
+    Desc = "mierdota",
+    Callback = function()
+loadstring(game:HttpGet("https://pastefy.app/UY1oh6PG/raw"))()
+    end
+})
+
+HubsUITab:Button({
+    Title = "Movesets UI",
+    Desc = "algunos no funcionan",
+    Callback = function()
+loadstring(game:HttpGet("https://gist.githubusercontent.com/proscripter400/b24547203a4cc12bdcfe77fd13dd7580/raw/fb8048c0d5b59d626879b1a06cfedaae3e7ee205/charhub"))()
+    end
+})
+
+HubsUITab:Button({
+    Title = "MEREBENNIE Hub",
+    Desc = "esta bien verga",
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/MerebennieOfficial/ExoticJn/refs/heads/main/Merebennie%20Hub%20V2"))()
+    end
+})
+
+HubsUITab:Button({
+    Title = "Vexon Hub",
+    Desc = "tiene de todo un poco",
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DiosDi/VexonHub/refs/heads/main/VexonHub"))()
+    end
+})
+
+HubsUITab:Button({
+    Title = "Phantasm Hub",
+    Desc = "es el viejo confiable",
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ATrainz/Phantasm/refs/heads/main/Games/TSB.lua"))()
+    end
+})
+
+HubsUITab:Button({
+    Title = "Arch Vault",
+    Desc = "Es de los mejores hubs",
+    Callback = function()
+loadstring(game:HttpGet("https://arch-vaults.vercel.app"))()
+    end
+})
+
+HubsUITab:Button({
+    Title = "INFINITE STUDIOS EMOTES HUB",
+    Desc = "requiere key",
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NetlessScripter/GOKU/refs/heads/main/FREE%20EMOTES%20GUI"))()
+    end
+})
+
+-- Botones de Song of the Day
+SongTab:Button({
+    Title = "Musica",
+    Desc = "no se porque puse esto xd",
+    Callback = function()
+        local HttpService = game:GetService("HttpService")
+local url = "https://github.com/MIYKOtuff/Assets-MP3-images-idk./raw/refs/heads/main/SpotiDownloader.com%20-%20Hakari%20vs%20Kashimo.%20Jackpot%20-%20Darckstar.mp3"
+writefile(".mp3", game:HttpGet(url))
+print("Sound file saved successfully!")
+local sound = Instance.new('Sound')
+sound.Parent = game.Players.LocalPlayer.Character
+sound.Volume = 1
+sound.SoundId = getcustomasset('LoveForYou.mp3')
+sound:Play()
+    end
+})
+
+-- Botones de Graphics, Fps and Quality
+GraphicsTab:Button({
+    Title = "Low GFX",
+    Desc = "Graficos de carton",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Low-GFX-38613"))()
+    end
+})
+
+GraphicsTab:Button({
+    Title = "Shaders Altos + blur",
+    Desc = "esta bueno para grabar xd",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/r3k33551-bot/Acortador-de-scripts/refs/heads/main/high-shaders.txt"))()
+    end
+})
+
+
+GraphicsTab:Button({
+    Title = "Shaders que hice yo (son los que uso en mis videos)",
+    Desc = "es mas saturacion e iluminacion",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/MIYKOtuff/Tuff/refs/heads/main/Simple%20Shaders%20by%20MIYKO.txt'))()
+    end
+})
+
+GraphicsTab:Button({
+    Title = "Fps Boost Arch-Vault",
+    Desc = "Calidad baja",
+    Callback = function()
+        local removedecals = false
+local g = game
+local w = g.Workspace
+local l = g.Lighting
+local t = w.Terrain
+t.WaterWaveSize = 0
+t.WaterWaveSpeed = 0
+t.WaterReflectance = 0
+t.WaterTransparency = 0
+l.GlobalShadows = false
+l.FogEnd = 9e9
+l.Brightness = 0
+settings().Rendering.QualityLevel = "Level01"
+for i, v in pairs(g:GetDescendants()) do
+    if v:IsA("Part") or v:IsA("Union") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+        v.Material = "Plastic"
+        v.Reflectance = 0
+    elseif v:IsA("Decal") or v:IsA("Texture") and removedecals then
+        v.Transparency = 1
+    elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+        v.Lifetime = NumberRange.new(0)
+    elseif v:IsA("Explosion") then
+        v.BlastPressure = 1
+        v.BlastRadius = 1
+    elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") or v:IsA("Sparkles") then
+        v.Enabled = false
+    elseif v:IsA("MeshPart") then
+        v.Material = "Plastic"
+        v.Reflectance = 0
+        v.TextureID = 10385902758728957
+    end
+end
+for i, e in pairs(l:GetChildren()) do
+    if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
+        e.Enabled = false
+    end
+end
+    end
+})
+
+-- Botones de Credits
+CreditsTab:Button({
+    Title = "Hub by MIYKO",
+    Desc = "Skibidi",
+    Callback = function()
+        local Font = Enum.Font.Arcade -- put any don't u want
+
+for _, service in pairs({
+    game:GetService("Workspace"),
+    game:GetService("CoreGui"),
+    game:GetService("StarterGui"),
+    game:GetService("StarterPack"),
+    game:GetService("StarterPlayer"),
+    game:GetService("Players")
+}) do
+    for _, descendant in pairs(service:GetDescendants()) do
+        if descendant:IsA("TextLabel") or descendant:IsA("TextButton") or descendant:IsA("TextBox") then
+            descendant.Font = Font
+        end
+    end
+    
+    service.DescendantAdded:Connect(function(descendant)
+        if descendant:IsA("TextLabel") or descendant:IsA("TextButton") or descendant:IsA("TextBox") then
+            descendant.Font = Font
+        end
+    end)
+end
+
+game:GetService("Players").PlayerAdded:Connect(function(player)
+    player.CharacterAdded:Connect(function(character)
+        for _, descendant in pairs(character:GetDescendants()) do
+            if descendant:IsA("TextLabel") or descendant:IsA("TextButton") or descendant:IsA("TextBox") then
+                descendant.Font = Font
+            end
+        end
+    end)
+end)
+    end
+})
+
+CreditsTab:Button({
+    Title = "Credits to the creators of the others scripts",
+    Desc = "pls dont't kill me",
+    Callback = function() end
+})
