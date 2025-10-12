@@ -574,6 +574,7 @@ SpecificModule = game.ReplicatedStorage.Emotes.VFX,
 AnimSent = 74819612786417,
 RealBind = dummyAccessory
 }
+end
 })
 
 DummyAnimationsTab:Button({
@@ -684,7 +685,7 @@ ServerSettingsTab:Button({
     end
 })
 
-ServerSettingsTab:Button({
+ServerSettingsTab:Dropdown({
     Title = "Server Hop",
     Desc = "sh",
     Callback = function()
@@ -757,52 +758,6 @@ ServerSettingsTab:Button({
 		end
 	end
 	Teleport()
-    end
-})
-
-ServerSettings:Dropdown({
-    Title = "Teleport to Player",
-    Values = {"No players available"},
-    Value = "Select a player",
-    Callback = function(selectedPlayer)
-        local Players = game:GetService("Players")
-        local LocalPlayer = Players.LocalPlayer
-
-        local targetPlayer = Players:FindFirstChild(selectedPlayer)
-        if targetPlayer and targetPlayer.Character and LocalPlayer.Character then
-            local targetChar = targetPlayer.Character
-            local humanoidRootPart = targetChar:FindFirstChild("HumanoidRootPart")
-            local localRootPart = LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
-
-            if humanoidRootPart and localRootPart then
-                localRootPart.CFrame = humanoidRootPart.CFrame
-            end
-        end
-    end
-})
-
-ServerSettings:Dropdown({
-    Title = "Teleport Locations",
-    Values = { "Death Counter Room", "Atomic Room", "Baseplate", "Mountain 1", "Mountain 2", "Mountain 3" },
-    Value = "Select Location",
-    Callback = function(option) 
-        local player = game.Players.LocalPlayer
-        local character = player.Character or player.CharacterAdded:Wait()
-        local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
-        
-        if option == "Death Counter Room" then
-            humanoidRootPart.CFrame = CFrame.new(-92, 29, 20347)
-        elseif option == "Atomic Room" then
-            humanoidRootPart.CFrame = CFrame.new(1079, 155, 23003)
-        elseif option == "Baseplate" then
-            humanoidRootPart.CFrame = CFrame.new(968, 20, 23088)
-        elseif option == "Mountain 1" then
-            humanoidRootPart.CFrame = CFrame.new(266, 699, 458)
-        elseif option == "Mountain 2" then
-            humanoidRootPart.CFrame = CFrame.new(551, 630, -265)
-        elseif option == "Mountain 3" then
-            humanoidRootPart.CFrame = CFrame.new(-107, 642, -328)
-        end
     end
 })
 
@@ -1390,12 +1345,12 @@ SongTab:Button({
     Callback = function()
         local HttpService = game:GetService("HttpService")
 local url = "https://github.com/MIYKOtuff/Assets-MP3-images-idk./raw/refs/heads/main/SpotiDownloader.com%20-%20Hakari%20vs%20Kashimo.%20Jackpot%20-%20Darckstar.mp3"
-writefile(".mp3", game:HttpGet(url))
+writefile("Yo.mp3", game:HttpGet(url))
 print("Sound file saved successfully!")
 local sound = Instance.new('Sound')
 sound.Parent = game.Players.LocalPlayer.Character
 sound.Volume = 1
-sound.SoundId = getcustomasset('LoveForYou.mp3')
+sound.SoundId = getcustomasset('Yo.mp3')
 sound:Play()
     end
 })
