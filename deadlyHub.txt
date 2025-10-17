@@ -224,23 +224,7 @@ FreeEmotesTab:Button({
     Title = "Ruthless (Kill Emote)",
     Desc = "Kill Emote Del Muro De Piedras",
     Callback = function()
-        local p = game.Players.LocalPlayer
-local c = p.Character or p.CharacterAdded:Wait()
-local h = c:WaitForChild("Humanoid")
-local a = Instance.new("Animation")
-a.AnimationId = "rbxassetid://129295156336675"
-h:LoadAnimation(a):Play()
-local e = Instance.new("Accessory")
-e.Name = "#EmoteHolder_" .. math.random(1e5)
-e.Parent = c
-e:SetAttribute("EmoteProperty", true)
-require(game.ReplicatedStorage.Emotes.VFX):MainFunction{
-    Character = c,
-    vfxName = "Ruthless",
-    SpecificModule = game.ReplicatedStorage.Emotes.VFX,
-    AnimSent = 129295156336675,
-    RealBind = e
-}
+        loadstring(game:HttpGet("https://arch-http.vercel.app/files/Ruthless Kill Emote By MIYKO"))()
     end
 })
 
@@ -322,18 +306,6 @@ h:LoadAnimation(a):Play()
 local s = Instance.new("Sound", c:WaitForChild("Head"))
 s.SoundId = "rbxassetid://106138436425034"
 s:Play()
-
-local e = Instance.new("Accessory")
-e.Name = "#EmoteHolder_"..math.random(1e5)
-e.Parent = c
-e:SetAttribute("EmoteProperty", true)
-require(game.ReplicatedStorage.Emotes.VFX):MainFunction{
-    Character = c,
-    vfxName = "Beneath Me",
-    SpecificModule = game.ReplicatedStorage.Emotes.VFX,
-    AnimSent = 134934729128196,
-    RealBind = e
-}
     end
 })
 
@@ -356,26 +328,7 @@ FreeEmotesTab:Button({
     Title = "Embers (kill emote)",
     Desc = "No Tiene Un Origen O Inspiracion",
     Callback = function()
-        -- Embers
-local p = game.Players.LocalPlayer
-local c = p.Character or p.CharacterAdded:Wait()
-local h = c:WaitForChild("Humanoid")
-
-local a = Instance.new("Animation")
-a.AnimationId = "rbxassetid://83905432418191"
-h:LoadAnimation(a):Play()
-
-local e = Instance.new("Accessory")
-e.Name = "#EmoteHolder_"..math.random(1e5)
-e.Parent = c
-e:SetAttribute("EmoteProperty", true)
-require(game.ReplicatedStorage.Emotes.VFX):MainFunction{
-    Character = c,
-    vfxName = "Embers",
-    SpecificModule = game.ReplicatedStorage.Emotes.VFX,
-    AnimSent = 83905432418191,
-    RealBind = e
-}
+        loadstring(game:HttpGet("https://arch-http.vercel.app/files/Embers Kill Emote By MIYKO"))()
     end
 })
 
@@ -383,52 +336,11 @@ FreeEmotesTab:Button({
     Title = "Time Shift (kill emote)",
     Desc = "Kill Emote De Jojo's",
     Callback = function()
-         -- Time Shift
-local p = game.Players.LocalPlayer
-local c = p.Character or p.CharacterAdded:Wait()
-local h = c:WaitForChild("Humanoid")
-
-local a = Instance.new("Animation")
-a.AnimationId = "rbxassetid://114451374603244"
-h:LoadAnimation(a):Play()
-
-local e = Instance.new("Accessory")
-e.Name = "#EmoteHolder_"..math.random(1e5)
-e.Parent = c
-e:SetAttribute("EmoteProperty", true)
-require(game.ReplicatedStorage.Emotes.VFX):MainFunction{
-    Character = c,
-    vfxName = "Time Shift",
-    SpecificModule = game.ReplicatedStorage.Emotes.VFX,
-    AnimSent = 114451374603244,
-    RealBind = e
-}
+         loadstring(game:HttpGet("https://arch-http.vercel.app/files/Time Shift Kill Emote By MIYKO"))()
     end
 })
 
 -- Botones de Dummy Animations
-DummyAnimationsTab:Button({
-    Title = "Last Will",
-    Desc = "Kill Emote De Hunter x Hunter",
-    Callback = function()
-        local dummy = game.Workspace.Live["Weakest Dummy"]
-local humanoid = dummy:WaitForChild("Humanoid")
-local anim = Instance.new("Animation")
-anim.AnimationId = "rbxassetid://113450724032380"
-humanoid:LoadAnimation(anim):Play()
-local accessory = Instance.new("Accessory")
-accessory.Name = "#EmoteHolder_" .. math.random(1e5)
-accessory.Parent = dummy
-accessory:SetAttribute("EmoteProperty", true)
-require(game.ReplicatedStorage.Emotes.VFX):MainFunction{
-    Character = dummy,
-    vfxName = "Last Will",
-    SpecificModule = game.ReplicatedStorage.Emotes.VFX,
-    AnimSent = 113450724032380,
-    RealBind = accessory
-}
-    end
-})
 
 DummyAnimationsTab:Button({
     Title = "Counter",
@@ -445,46 +357,6 @@ playAnim(player.Character or player.CharacterAdded:Wait(), 18440398084)
 local dummy = game.Workspace.Live["Weakest Dummy"]
 playAnim(dummy, 18440406788)
     end
-})
-
-DummyAnimationsTab:Button({
-    Title = "Eternal Seal",
-    Desc = "ponte atras del dummy",
-    Callback = function()
-        local player = game.Players.LocalPlayer
-local character = player.Character or player.CharacterAdded:Wait()
-local humanoid = character:WaitForChild("Humanoid")
-local anim = Instance.new("Animation")
-anim.AnimationId = "rbxassetid://100255267749203"
-humanoid:LoadAnimation(anim):Play()
-local accessory = Instance.new("Accessory")
-accessory.Name = "#EmoteHolder_" .. math.random(1e5)
-accessory.Parent = character
-accessory:SetAttribute("EmoteProperty", true)
-require(game.ReplicatedStorage.Emotes.VFX):MainFunction{
-Character = character,
-vfxName = "Eternal Seal",
-SpecificModule = game.ReplicatedStorage.Emotes.VFX,
-AnimSent = 100255267749203,
-RealBind = accessory
-}
-local dummy = game.Workspace.Live["Weakest Dummy"]
-local dummyHumanoid = dummy:WaitForChild("Humanoid")
-local dummyAnim = Instance.new("Animation")
-dummyAnim.AnimationId = "rbxassetid://74819612786417"
-dummyHumanoid:LoadAnimation(dummyAnim):Play()
-local dummyAccessory = Instance.new("Accessory")
-dummyAccessory.Name = "#EmoteHolder_" .. math.random(1e5)
-dummyAccessory.Parent = dummy
-dummyAccessory:SetAttribute("EmoteProperty", true)
-require(game.ReplicatedStorage.Emotes.VFX):MainFunction{
-Character = dummy,
-vfxName = "Eternal Seal",
-SpecificModule = game.ReplicatedStorage.Emotes.VFX,
-AnimSent = 74819612786417,
-RealBind = dummyAccessory
-}
-end
 })
 
 DummyAnimationsTab:Button({
