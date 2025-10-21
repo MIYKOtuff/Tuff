@@ -1,6 +1,6 @@
 local WindUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/Footagesus/WindUI/main/dist/main.lua"))()
 
--- Localización
+-- Localización.
 WindUI:Localization({
     Enabled = true,
     Prefix = "loc:",
@@ -165,7 +165,7 @@ LimitedEmotesTab:Button({
     Title = "World Cutting Slash (Kill Emote)",
     Desc = "Emote de Sukuna, Corte Que Parte El Mundo",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Yourfavoriteguy/Sukunaslash/refs/heads/main/WorldCuttingSlash",true))()
+        loadstring(game:HttpGet("https://arch-http.vercel.app/files/World Cutting Slash Limited Emote By Lilith"))()
     end
 })
 
@@ -173,7 +173,7 @@ LimitedEmotesTab:Button({
     Title = "The Fallen",
     Desc = "Emote De Sukuna, Sukuna En Megumi",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Yourfavoriteguy/Idka3/refs/heads/main/ehhehe",true))()
+        loadstring(game:HttpGet("https://arch-http.vercel.app/files/The Fallen Limited Emote By MIYKO"))()
     end
 })
 
@@ -206,8 +206,223 @@ s:Play()
 })
 
 FreeEmotesTab:Button({
+    Title = "idk (Gojo dance)",
+    Desc = "Emote De Baile De Gojo",
+    Callback = function()
+        local p = game.Players.LocalPlayer
+local c, h = p.Character, p.Character:WaitForChild("Humanoid")
+local a = Instance.new("Animation")
+a.AnimationId = "rbxassetid://13777338337"
+h:LoadAnimation(a):Play()
+    end
+})
+
+FreeEmotesTab:Button({
+    Title = "Idk (Itadori Caminando)",
+    Desc = "",
+    Callback = function()
+        local p = game.Players.LocalPlayer
+local c, h = p.Character, p.Character:WaitForChild("Humanoid")
+local a = Instance.new("Animation")
+a.AnimationId = "rbxassetid://15962326593"
+h:LoadAnimation(a):Play()
+    end
+})
+
+FreeEmotesTab:Button({
+    Title = "Take The L",
+    Desc = "Tipico Toxico",
+    Callback = function()
+        local p = game.Players.LocalPlayer
+local c, h = p.Character, p.Character:WaitForChild("Humanoid")
+local a = Instance.new("Animation")
+a.AnimationId = "rbxassetid://18614546390"
+h:LoadAnimation(a):Play()
+    end
+})
+
+FreeEmotesTab:Button({
+    Title = ":D",
+    Desc = "",
+    Callback = function()
+        local p = game.Players.LocalPlayer
+local c, h = p.Character, p.Character:WaitForChild("Humanoid")
+local a = Instance.new("Animation")
+a.AnimationId = "rbxassetid://18450597765"
+h:LoadAnimation(a):Play()
+    end
+})
+
+FreeEmotesTab:Button({
+    Title = "Shigure Ui Dance",
+    Desc = "Mi Baile Fav",
+    Callback = function()
+        local p = game.Players.LocalPlayer
+local c, h = p.Character, p.Character:WaitForChild("Humanoid")
+local a = Instance.new("Animation")
+a.AnimationId = "rbxassetid://17861893708"
+h:LoadAnimation(a):Play()
+    end
+})
+
+FreeEmotesTab:Button({
+    Title = "Cute Spin",
+    Desc = "",
+    Callback = function()
+        local p = game.Players.LocalPlayer
+local c, h = p.Character, p.Character:WaitForChild("Humanoid")
+local a = Instance.new("Animation")
+a.AnimationId = "rbxassetid://17861849696"
+h:LoadAnimation(a):Play()
+    end
+})
+
+FreeEmotesTab:Button({
+    Title = "Shy",
+    Desc = "",
+    Callback = function()
+        local p = game.Players.LocalPlayer
+local c, h = p.Character, p.Character:WaitForChild("Humanoid")
+local a = Instance.new("Animation")
+a.AnimationId = "rbxassetid://16524848169"
+h:LoadAnimation(a):Play()
+    end
+})
+FreeEmotesTab:Button({
+    Title = "Tornado",
+    Desc = "",
+    Callback = function()
+        local p = game.Players.LocalPlayer
+local c, h = p.Character, p.Character:WaitForChild("Humanoid")
+local a = Instance.new("Animation")
+a.AnimationId = "rbxassetid://18459285150"
+h:LoadAnimation(a):Play()
+    end
+})
+
+FreeEmotesTab:Button({
+    Title = "Ohio Dance",
+    Desc = "",
+    Callback = function()
+        local p = game.Players.LocalPlayer
+local c, h = p.Character, p.Character:WaitForChild("Humanoid")
+local a = Instance.new("Animation")
+a.AnimationId = "rbxassetid://17861841334"
+h:LoadAnimation(a):Play()
+    end
+})
+
+FreeEmotesTab:Button({
+    Title = "Hand Cross Dance",
+    Desc = "",
+    Callback = function()
+        local p = game.Players.LocalPlayer
+local c, h = p.Character, p.Character:WaitForChild("Humanoid")
+local a = Instance.new("Animation")
+a.AnimationId = "rbxassetid://17861844224"
+h:LoadAnimation(a):Play()
+    end
+})
+
+FreeEmotesTab:Button({
+    Title = "Idk (Mahito arrastrandose)",
+    Desc = "Mahito cuando ve a itadori xd",
+    Callback = function()
+        local p = game.Players.LocalPlayer
+local c, h = p.Character, p.Character:WaitForChild("Humanoid")
+local a = Instance.new("Animation")
+a.AnimationId = "rbxassetid://15958281277"
+h:LoadAnimation(a):Play()
+    end
+})
+
+FreeEmotesTab:Button({
+    Title = "SIUUUU",
+    Desc = "",
+    Callback = function()
+        local p = game.Players.LocalPlayer
+local c, h = p.Character, p.Character:WaitForChild("Humanoid")
+local a = Instance.new("Animation")
+a.AnimationId = "rbxassetid://17122171961"
+h:LoadAnimation(a):Play()
+    end
+})
+
+FreeEmotesTab:Button({
+    Title = "Dab",
+    Desc = "",
+    Callback = function()
+        local p = game.Players.LocalPlayer
+local c, h = p.Character, p.Character:WaitForChild("Humanoid")
+local a = Instance.new("Animation")
+a.AnimationId = "rbxassetid://17121243447"
+h:LoadAnimation(a):Play()
+    end
+})
+
+FreeEmotesTab:Button({
+    Title = "Cat Dance",
+    Desc = "",
+    Callback = function()
+        local p = game.Players.LocalPlayer
+local c, h = p.Character, p.Character:WaitForChild("Humanoid")
+local a = Instance.new("Animation")
+a.AnimationId = "rbxassetid://17121145590"
+h:LoadAnimation(a):Play()
+    end
+})
+
+FreeEmotesTab:Button({
+    Title = "Bow Of Respect",
+    Desc = "",
+    Callback = function()
+        local p = game.Players.LocalPlayer
+local c, h = p.Character, p.Character:WaitForChild("Humanoid")
+local a = Instance.new("Animation")
+a.AnimationId = "rbxassetid://15673683215"
+h:LoadAnimation(a):Play()
+    end
+})
+
+FreeEmotesTab:Button({
+    Title = "Stay Down",
+    Desc = "",
+    Callback = function()
+        local p = game.Players.LocalPlayer
+local c, h = p.Character, p.Character:WaitForChild("Humanoid")
+local a = Instance.new("Animation")
+a.AnimationId = "rbxassetid://15290114868"
+h:LoadAnimation(a):Play()
+    end
+})
+
+FreeEmotesTab:Button({
+    Title = "Eyes On Me",
+    Desc = "",
+    Callback = function()
+        local p = game.Players.LocalPlayer
+local c, h = p.Character, p.Character:WaitForChild("Humanoid")
+local a = Instance.new("Animation")
+a.AnimationId = "rbxassetid://17266385960"
+h:LoadAnimation(a):Play()
+    end
+})
+
+FreeEmotesTab:Button({
+    Title = "Chosen",
+    Desc = "",
+    Callback = function()
+        local p = game.Players.LocalPlayer
+local c, h = p.Character, p.Character:WaitForChild("Humanoid")
+local a = Instance.new("Animation")
+a.AnimationId = "rbxassetid://18897538537"
+h:LoadAnimation(a):Play()
+    end
+})
+
+FreeEmotesTab:Button({
     Title = "Ajustar",
-    Desc = "Movimientos Aleatorios",
+    Desc = "",
     Callback = function()
         -- Ajustar
 local p = game.Players.LocalPlayer
@@ -230,7 +445,7 @@ FreeEmotesTab:Button({
 
 FreeEmotesTab:Button({
     Title = "Caida",
-    Desc = "Emote de Palpiteo Del Corazón",
+    Desc = "",
     Callback = function()
         -- Caída
 local p = game.Players.LocalPlayer
@@ -244,24 +459,12 @@ h:LoadAnimation(a):Play()
 local s = Instance.new("Sound", c:WaitForChild("HumanoidRootPart"))
 s.SoundId = "rbxassetid://17107935019"
 s:Play()
-
-local e = Instance.new("Accessory")
-e.Name = "#EmoteHolder_"..math.random(1e5)
-e.Parent = c
-e:SetAttribute("EmoteProperty", true)
-require(game.ReplicatedStorage.Emotes.VFX):MainFunction{
-    Character = c,
-    vfxName = "Caída",
-    SpecificModule = game.ReplicatedStorage.Emotes.VFX,
-    AnimSent = 17107937300,
-    RealBind = e
-}
     end
 })
 
 FreeEmotesTab:Button({
     Title = "Explocion",
-    Desc = "Emote De disparo",
+    Desc = "",
     Callback = function()
         -- Explosión
 local p = game.Players.LocalPlayer
@@ -275,18 +478,6 @@ h:LoadAnimation(a):Play()
 local s = Instance.new("Sound", c:WaitForChild("HumanoidRootPart"))
 s.SoundId = "rbxassetid://16746816646"
 s:Play()
-
-local e = Instance.new("Accessory")
-e.Name = "#EmoteHolder_"..math.random(1e5)
-e.Parent = c
-e:SetAttribute("EmoteProperty", true)
-require(game.ReplicatedStorage.Emotes.VFX):MainFunction{
-    Character = c,
-    vfxName = "Explosión",
-    SpecificModule = game.ReplicatedStorage.Emotes.VFX,
-    AnimSent = 16746824621,
-    RealBind = e
-}
     end
 })
 
@@ -326,7 +517,7 @@ h:LoadAnimation(a):Play()
 
 FreeEmotesTab:Button({
     Title = "Embers (kill emote)",
-    Desc = "No Tiene Un Origen O Inspiracion",
+    Desc = "",
     Callback = function()
         loadstring(game:HttpGet("https://arch-http.vercel.app/files/Embers Kill Emote By MIYKO"))()
     end
@@ -334,7 +525,7 @@ FreeEmotesTab:Button({
 
 FreeEmotesTab:Button({
     Title = "Time Shift (kill emote)",
-    Desc = "Kill Emote De Jojo's",
+    Desc = "",
     Callback = function()
          loadstring(game:HttpGet("https://arch-http.vercel.app/files/Time Shift Kill Emote By MIYKO"))()
     end
@@ -458,6 +649,377 @@ MIYKOTUFFTab:Button({
     Desc = "Revivir En El Lugar Donde Muriste",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/MIYKOtuff/Tuff/refs/heads/main/Relive%20script%20by%20MIYKO.txt"))()
+    end
+})
+
+MIYKOTUFFTab:Button({
+    Title = "Void Kill Manual",
+    Desc = "by Lilith",
+    Callback = function()
+        local Players = game:GetService("Players")
+local UserInputService = game:GetService("UserInputService")
+local RunService = game:GetService("RunService")
+
+local player = Players.LocalPlayer
+
+local VOID_POSITION = Vector3.new(0, -450, 0)
+local PLATFORM_SIZE = Vector3.new(100, 2, 100)
+local BUTTON_SIZE = UDim2.new(0, 70, 0, 30)
+
+local lastPosition = nil
+local voidPlatform = nil
+
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "VoidTeleportGUI"
+screenGui.ResetOnSpawn = false
+screenGui.Parent = player:WaitForChild("PlayerGui")
+
+local function getRainbowColor(hueShift)
+	local hue = tick() * 0.25 + (hueShift or 0)
+	return Color3.fromHSV(hue % 1, 1, 1)
+end
+
+local function addRGBBorder(button)
+	local border = Instance.new("UIStroke")
+	border.Thickness = 2
+	border.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	border.Parent = button
+	RunService.RenderStepped:Connect(function()
+		border.Color = getRainbowColor()
+	end)
+end
+
+local function createButton(name, text, position)
+	local button = Instance.new("TextButton")
+	button.Name = name
+	button.Size = BUTTON_SIZE
+	button.Position = position
+	button.Text = text
+	button.Font = Enum.Font.SourceSansBold
+	button.TextScaled = true
+	button.BackgroundTransparency = 0.15
+	button.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+	button.TextColor3 = Color3.fromRGB(255, 255, 255)
+	button.BorderSizePixel = 0
+	button.Parent = screenGui
+	addRGBBorder(button)
+
+	local dragging, dragStart, startPos = false, nil, nil
+	button.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = button.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+
+	UserInputService.InputChanged:Connect(function(input)
+		if dragging and (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
+			local delta = input.Position - dragStart
+			button.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		end
+	end)
+
+	return button
+end
+
+local voidButton = createButton("VoidButton", "Void", UDim2.new(0.85, 0, 0.05, 0))
+local returnButton = createButton("ReturnButton", "Return", UDim2.new(0.85, 0, 0.12, 0))
+
+local function teleportToVoid()
+	local character = player.Character or player.CharacterAdded:Wait()
+	local hrp = character:FindFirstChild("HumanoidRootPart")
+	if not hrp then return end
+	lastPosition = hrp.Position
+	if not voidPlatform or not voidPlatform.Parent then
+		voidPlatform = Instance.new("Part")
+		voidPlatform.Name = "VoidPlatform"
+		voidPlatform.Size = PLATFORM_SIZE
+		voidPlatform.Anchored = true
+		voidPlatform.Color = Color3.fromRGB(40, 40, 40)
+		voidPlatform.Material = Enum.Material.SmoothPlastic
+		voidPlatform.Position = Vector3.new(VOID_POSITION.X, VOID_POSITION.Y - (PLATFORM_SIZE.Y / 2), VOID_POSITION.Z)
+		voidPlatform.Parent = workspace
+	end
+	hrp.CFrame = CFrame.new(VOID_POSITION + Vector3.new(0, 5, 0))
+end
+
+local function returnToLastPosition()
+	local character = player.Character or player.CharacterAdded:Wait()
+	local hrp = character:FindFirstChild("HumanoidRootPart")
+	if not hrp or not lastPosition then return end
+	hrp.CFrame = CFrame.new(lastPosition + Vector3.new(0, 3, 0))
+end
+
+voidButton.MouseButton1Click:Connect(teleportToVoid)
+returnButton.MouseButton1Click:Connect(returnToLastPosition)
+    end
+})
+
+MIYKOTUFFTab:Button({
+    Title = "Dummy Follower",
+    Desc = "By Lilith",
+    Callback = function()
+        local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local dummy = game.Workspace.Live:FindFirstChild("Weakest Dummy")
+
+if not dummy or not dummy:FindFirstChild("HumanoidRootPart") then
+warn("Dummy no encontrado o sin HumanoidRootPart")
+return
+end
+
+local clone = dummy:Clone()
+clone.Name = "DummyFollower"
+clone.Parent = game.Workspace
+clone:SetPrimaryPartCFrame(dummy.PrimaryPart.CFrame + Vector3.new(3,0,0))
+
+local billboard = Instance.new("BillboardGui")
+billboard.Adornee = clone:WaitForChild("Head")
+billboard.Size = UDim2.new(0, 250, 0, 60)
+billboard.StudsOffset = Vector3.new(0,3,0)
+billboard.AlwaysOnTop = true
+billboard.MaxDistance = 100
+billboard.Parent = player:WaitForChild("PlayerGui")
+
+local textLabel = Instance.new("TextLabel")
+textLabel.Size = UDim2.new(1,0,1,0)
+textLabel.BackgroundTransparency = 1
+textLabel.TextColor3 = Color3.fromRGB(255,255,255)
+textLabel.TextStrokeColor3 = Color3.fromRGB(0,0,0)
+textLabel.TextStrokeTransparency = 0
+textLabel.Font = Enum.Font.Arcade
+textLabel.TextScaled = true
+textLabel.RichText = true
+textLabel.TextWrapped = true
+textLabel.Text = "¡Te sigo!"
+textLabel.Parent = billboard
+
+local TweenService = game:GetService("TweenService")
+local RunService = game:GetService("RunService")
+
+RunService.RenderStepped:Connect(function()
+if clone.PrimaryPart and character:FindFirstChild("HumanoidRootPart") then
+local targetPos = character.HumanoidRootPart.Position - (character.HumanoidRootPart.CFrame.LookVector * 3)
+local goal = {CFrame = CFrame.new(targetPos, character.HumanoidRootPart.Position)}
+local tween = TweenService:Create(clone.PrimaryPart, TweenInfo.new(0.2, Enum.EasingStyle.Linear), goal)
+tween:Play()
+end
+end)
+
+local cloneHumanoid = clone:WaitForChild("Humanoid")
+local activeTracks = {}
+
+local function replicateAnimation(track)
+if not track.Animation then return end
+local anim = Instance.new("Animation")
+anim.AnimationId = track.Animation.AnimationId
+local newTrack = cloneHumanoid:LoadAnimation(anim)
+newTrack:Play()
+newTrack.TimePosition = track.TimePosition
+activeTracks[track] = newTrack
+end
+
+humanoid.AnimationPlayed:Connect(function(track)
+replicateAnimation(track)
+end)
+
+RunService.RenderStepped:Connect(function()
+for originalTrack, cloneTrack in pairs(activeTracks) do
+if originalTrack.IsPlaying then
+cloneTrack.TimePosition = originalTrack.TimePosition
+else
+cloneTrack:Stop()
+activeTracks[originalTrack] = nil
+end
+end
+end)
+    end
+})
+
+MIYKOTUFFTab:Button({
+    Title = "Farm",
+    Desc = "by Lilith",
+    Callback = function()
+        local Players = game:GetService("Players")
+local TweenService = game:GetService("TweenService")
+local UserInputService = game:GetService("UserInputService")
+local RunService = game:GetService("RunService")
+
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local hrp = character:WaitForChild("HumanoidRootPart")
+
+local targetPlayer = nil
+local following = false
+local uiVisible = true
+local dummy = workspace:FindFirstChild("Live") and workspace.Live:FindFirstChild("Weakest Dummy")
+
+local gui = Instance.new("ScreenGui", game.CoreGui)
+local frame = Instance.new("Frame", gui)
+frame.Size = UDim2.new(0, 220, 0, 180)
+frame.Position = UDim2.new(0.5, -110, 0.5, -90)
+frame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+frame.Active, frame.Draggable = true, true
+
+local stroke = Instance.new("UIStroke", frame)
+stroke.Thickness = 2
+task.spawn(function()
+	while task.wait() do
+		for i = 0, 1, 0.01 do
+			stroke.Color = Color3.fromHSV(i, 1, 1)
+			task.wait(0.03)
+		end
+	end
+end)
+
+local title = Instance.new("TextLabel", frame)
+title.Size = UDim2.new(1, 0, 0, 25)
+title.BackgroundTransparency = 1
+title.Text = "Player Follow UI"
+title.TextColor3 = Color3.new(1, 1, 1)
+title.Font = Enum.Font.GothamBold
+title.TextSize = 16
+
+local dropdown = Instance.new("TextButton", frame)
+dropdown.Size = UDim2.new(1, -20, 0, 30)
+dropdown.Position = UDim2.new(0, 10, 0, 40)
+dropdown.Text = "Select Player"
+dropdown.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+dropdown.TextColor3 = Color3.new(1, 1, 1)
+dropdown.Font = Enum.Font.Gotham
+dropdown.TextSize = 14
+
+local dropdownFrame = Instance.new("Frame", frame)
+dropdownFrame.Size = UDim2.new(1, -20, 0, 120)
+dropdownFrame.Position = UDim2.new(0, 10, 0, 75)
+dropdownFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+dropdownFrame.Visible = false
+dropdownFrame.BorderSizePixel = 0
+local list = Instance.new("UIListLayout", dropdownFrame)
+
+local function refreshPlayers()
+	for _, obj in pairs(dropdownFrame:GetChildren()) do
+		if obj:IsA("TextButton") then obj:Destroy() end
+	end
+
+	local noneBtn = Instance.new("TextButton", dropdownFrame)
+	noneBtn.Size = UDim2.new(1, 0, 0, 25)
+	noneBtn.Text = "None"
+	noneBtn.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+	noneBtn.TextColor3 = Color3.new(1, 1, 1)
+	noneBtn.MouseButton1Click:Connect(function()
+		targetPlayer = nil
+		dropdown.Text = "Selected: None"
+		dropdownFrame.Visible = false
+	end)
+
+	if dummy and dummy:FindFirstChild("HumanoidRootPart") then
+		local btn = Instance.new("TextButton", dropdownFrame)
+		btn.Size = UDim2.new(1, 0, 0, 25)
+		btn.Text = "Weakest Dummy"
+		btn.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+		btn.TextColor3 = Color3.new(1, 1, 1)
+		btn.MouseButton1Click:Connect(function()
+			targetPlayer = dummy
+			dropdown.Text = "Selected: Weakest Dummy"
+			dropdownFrame.Visible = false
+		end)
+	end
+
+	for _, plr in pairs(Players:GetPlayers()) do
+		if plr ~= player then
+			local btn = Instance.new("TextButton", dropdownFrame)
+			btn.Size = UDim2.new(1, 0, 0, 25)
+			btn.Text = plr.Name
+			btn.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+			btn.TextColor3 = Color3.new(1, 1, 1)
+			btn.MouseButton1Click:Connect(function()
+				targetPlayer = plr
+				dropdown.Text = "Selected: " .. plr.Name
+				dropdownFrame.Visible = false
+			end)
+		end
+	end
+end
+
+dropdown.MouseButton1Click:Connect(function()
+	dropdownFrame.Visible = not dropdownFrame.Visible
+	refreshPlayers()
+end)
+dropdownFrame.Parent = frame
+
+local startBtn = Instance.new("TextButton", frame)
+startBtn.Size = UDim2.new(0.45, 0, 0, 30)
+startBtn.Position = UDim2.new(0.05, 0, 0, 140)
+startBtn.Text = "Start"
+startBtn.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+startBtn.TextColor3 = Color3.new(0, 1, 0)
+startBtn.Font = Enum.Font.GothamBold
+
+local stopBtn = Instance.new("TextButton", frame)
+stopBtn.Size = UDim2.new(0.45, 0, 0, 30)
+stopBtn.Position = UDim2.new(0.5, 0, 0, 140)
+stopBtn.Text = "Stop"
+stopBtn.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+stopBtn.TextColor3 = Color3.new(1, 0, 0)
+stopBtn.Font = Enum.Font.GothamBold
+
+UserInputService.InputBegan:Connect(function(input, gp)
+	if not gp and input.KeyCode == Enum.KeyCode.RightShift then
+		uiVisible = not uiVisible
+		frame.Visible = uiVisible
+	end
+end)
+
+local angle = 0
+local radius = 3
+
+local function followAndOrbit()
+	while following do
+		if targetPlayer then
+			local targetHRP
+			if typeof(targetPlayer) == "Instance" and targetPlayer:IsA("Model") and targetPlayer:FindFirstChild("HumanoidRootPart") then
+				targetHRP = targetPlayer.HumanoidRootPart
+			elseif typeof(targetPlayer) == "Instance" and targetPlayer:IsA("Player") and targetPlayer.Character and targetPlayer.Character:FindFirstChild("HumanoidRootPart") then
+				targetHRP = targetPlayer.Character.HumanoidRootPart
+			end
+
+			if targetHRP then
+				angle = angle + math.rad(15)
+				local offset = Vector3.new(
+					math.cos(angle) * radius + math.random(-1,1),
+					math.random(0,2),
+					math.sin(angle) * radius + math.random(-1,1)
+				)
+				local newPos = targetHRP.Position + offset
+				local lookCFrame = CFrame.lookAt(newPos, targetHRP.Position)
+				local tween = TweenService:Create(hrp, TweenInfo.new(0.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {CFrame = lookCFrame})
+				tween:Play()
+				task.wait(0.1)
+			else
+				task.wait(0.2)
+			end
+		else
+			task.wait(0.2)
+		end
+	end
+end
+
+startBtn.MouseButton1Click:Connect(function()
+	following = true
+	followAndOrbit()
+end)
+
+stopBtn.MouseButton1Click:Connect(function()
+	following = false
+end)
     end
 })
 
@@ -1551,6 +2113,25 @@ ServerSettingsTab:Button({
 	end)
 	
 	coroutine.resume(Rejoin)
+    end
+})
+
+ServerSettingsTab:Button({
+    Title = "Tp to dummy",
+    Desc = "by Lilith",
+    Callback = function()
+        local player = game.Players.LocalPlayer
+local dummy = game.Workspace.Live:FindFirstChild("Weakest Dummy")
+
+if not dummy or not dummy:FindFirstChild("HumanoidRootPart") then
+    warn("Dummy no encontrado o sin HumanoidRootPart")
+    return
+end
+
+local character = player.Character or player.CharacterAdded:Wait()
+local hrp = character:WaitForChild("HumanoidRootPart")
+
+hrp.CFrame = dummy.HumanoidRootPart.CFrame * CFrame.new(0, 0, 3)
     end
 })
 
