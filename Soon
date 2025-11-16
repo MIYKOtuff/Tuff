@@ -1,0 +1,79 @@
+local Players = game:GetService("Players")
+local TweenService = game:GetService("TweenService")
+
+local player = Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+
+local gui = Instance.new("ScreenGui", playerGui)
+gui.IgnoreGuiInset = true
+gui.ResetOnSpawn = false
+
+local frame = Instance.new("Frame", gui)
+frame.AnchorPoint = Vector2.new(0.5, 0.5)
+frame.Position = UDim2.new(0.5, 0.7, 0.5, 0)
+frame.Size = UDim2.new(0, 0, 0, 0)
+frame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+frame.BackgroundTransparency = 0.2
+frame.ClipsDescendants = true
+frame.Visible = true
+frame:SetAttribute("IsOpen", false)
+
+local stroke = Instance.new("UIStroke", frame)
+stroke.Thickness = 2.4
+stroke.Color = Color3.fromRGB(255, 40, 180)
+stroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+local corner = Instance.new("UICorner", frame)
+corner.CornerRadius = UDim.new(0, 18)
+
+local txt = Instance.new("TextLabel", frame)
+txt.Size = UDim2.new(1, -20, 1, -10)
+txt.Position = UDim2.new(0, 10, 0, 5)
+txt.BackgroundTransparency = 1
+txt.Text = "SOON"
+txt.Font = Enum.Font.GothamBold
+txt.TextScaled = true
+txt.TextTransparency = 1
+txt.TextColor3 = Color3.fromRGB(255, 70, 200)
+
+local gradient = Instance.new("UIGradient", txt)
+gradient.Color = ColorSequence.new({
+    ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 60, 180)),
+    ColorSequenceKeypoint.new(1, Color3.fromRGB(120, 60, 255)),
+})
+gradient.Rotation = 45
+
+task.spawn(function()
+    while gradient do
+        for i = 0, 360, 1 do
+            gradient.Rotation = i
+            task.wait(0.02)
+        end
+    end
+end)
+
+local function ShowNotification()
+    if frame:GetAttribute("IsOpen") then return end
+    frame:SetAttribute("IsOpen", true)
+
+    TweenService:Create(frame, TweenInfo.new(.35, Enum.EasingStyle.Quint), {
+        Size = UDim2.new(0, 260, 0, 80)
+    }):Play()
+
+    task.wait(.2)
+    TweenService:Create(txt, TweenInfo.new(.4, Enum.EasingStyle.Quint), {
+        TextTransparency = 0
+    }):Play()
+
+    task.wait(2.2)
+
+    TweenService:Create(txt, TweenInfo.new(.3), {TextTransparency = 1}):Play()
+    TweenService:Create(frame, TweenInfo.new(.4, Enum.EasingStyle.Quint), {
+        Size = UDim2.new(0, 0, 0, 0)
+    }):Play()
+
+    task.wait(.4)
+    gui:Destroy()
+end
+
+ShowNotification()
