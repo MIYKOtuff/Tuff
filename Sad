@@ -1,0 +1,96 @@
+local HttpService = game:GetService("HttpService")
+
+local url = "https://github.com/MIYKOtuff/Assets-MP3-images-idk./raw/refs/heads/main/PinDown.io_@RealSaulGoodman_1763343446_16112025.mp3"
+
+writefile("MYWORK.mp3", game:HttpGet(url))
+
+print("Sound saved")
+local sound = Instance.new('Sound')
+sound.Parent = game.Players.LocalPlayer.Character
+sound.Volume = 1
+sound.SoundId = getcustomasset('MYWORK.mp3')
+sound:Play()
+
+local player = game.Players.LocalPlayer
+local char = player.Character or player.CharacterAdded:Wait()
+local cam = workspace.CurrentCamera
+cam.CameraType = Enum.CameraType.Scriptable
+
+local arm = char:WaitForChild("RightUpperArm")
+local head = char:WaitForChild("Head")
+local root = char:WaitForChild("HumanoidRootPart")
+
+local viewArmTime = 4
+local zoomTime = 5
+local zoomDist = -2
+
+local IMAGES = {
+    77013004747626, 79015244134125, 99516069264678, 136150627771168, 119381648666724,
+    70605955346103, 133670549998861, 76530986736419, 113282007736269, 121767592424731, 77637969781964
+}
+
+local function smooth(a, b, t)
+	return a:Lerp(b, t)
+end
+
+local forward = root.CFrame.LookVector
+local distance = 1.7
+
+local camPosArm = arm.Position
+	+ forward * distance
+	+ Vector3.new(0, -0.8, 0)
+
+cam.CFrame = CFrame.new(camPosArm, arm.Position + Vector3.new(0, -0.6, 0))
+task.wait(viewArmTime)
+
+local frontPos = head.Position + forward * 3
+cam.CFrame = CFrame.new(frontPos, head.Position)
+
+local panel = Instance.new("Part")
+panel.Size = Vector3.new(40, 25, 0.2)
+panel.Anchored = true
+panel.CanCollide = false
+panel.Parent = workspace
+
+local forward = root.CFrame.LookVector
+local backPos = head.Position - forward * 12 + Vector3.new(0, 1.5, 0)
+
+panel.CFrame = CFrame.new(backPos, head.Position) 
+
+local surface = Instance.new("SurfaceGui")
+surface.Parent = panel
+surface.Face = Enum.NormalId.Front
+surface.LightInfluence = 0
+surface.AlwaysOnTop = false
+
+local imageLabel = Instance.new("ImageLabel", surface)
+imageLabel.Size = UDim2.new(1, 0, 1, 0)
+imageLabel.BackgroundTransparency = 1
+
+local zoomStart = cam.CFrame
+local zoomEnd = zoomStart * CFrame.new(0, 0, zoomDist)
+
+local t0 = tick()
+local imgIndex = 1
+local changeInterval = zoomTime / #IMAGES
+
+while tick() - t0 < zoomTime do
+	
+	local elapsed = tick() - t0
+	local newIndex = math.clamp(math.floor(elapsed / changeInterval) + 1, 1, #IMAGES)
+	
+	if newIndex ~= imgIndex then
+		imgIndex = newIndex
+		imageLabel.Image = "rbxassetid://".. IMAGES[imgIndex]
+	end
+
+	local alpha = (tick() - t0) / zoomTime
+	cam.CFrame = smooth(zoomStart, zoomEnd, alpha)
+
+	task.wait()
+end
+
+cam.CFrame = zoomEnd
+
+panel:Destroy()
+cam.CameraType = Enum.CameraType.Custom
