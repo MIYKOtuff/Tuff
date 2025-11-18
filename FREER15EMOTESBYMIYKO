@@ -41,16 +41,102 @@ local Window = WindUI:CreateWindow({
 
 local function NotifyAll()
     WindUI:Notify({
-        Title = "IMPORTANTE",
-        Content = "Emotes Por MIYKO, Minhnat Es un pendejo",
+        Title = "IMPORTANT",
+        Content = "Emotes By MIYKO",
         Icon = "info"
     })
 end
 
 local MainSection = Window:Section({ Title = "Settings" })
 
+
+
+-- BEST EMOTOS
+local Tab = MainSection:Tab({
+    Title = "Best Emotes R15",
+    Icon = "user",
+})
+
+
+
+
+
+
+Tab:Button({
+    Title = "Hakari Dance",
+    Desc = "By-MIYKO",
+    Callback = function()
+        local animationId = 86208454108756
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local anim = Instance.new("Animation")
+anim.AnimationId = "rbxassetid://" .. animationId
+local track = humanoid:LoadAnimation(anim)
+track:Play()
+        NotifyAll()
+    end
+})
+
+Tab:Button({
+    Title = "Hollow Purple",
+    Desc = "By-MIYKO",
+    Callback = function()
+        local animationId = 93612961664824
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local anim = Instance.new("Animation")
+anim.AnimationId = "rbxassetid://" .. animationId
+local track = humanoid:LoadAnimation(anim)
+track:Play()
+        NotifyAll()
+    end
+})
+
+Tab:Button({
+    Title = "Gojo Stance",
+    Desc = "By-MIYKO",
+    Callback = function()
+        local animationId = 76342783952866
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local anim = Instance.new("Animation")
+anim.AnimationId = "rbxassetid://" .. animationId
+local track = humanoid:LoadAnimation(anim)
+track:Play()
+        NotifyAll()
+    end
+})
+
+Tab:Button({
+    Title = "Fornite (Default Dance)",
+    Desc = "By-MIYKO",
+    Callback = function()
+        local animationId = 101011728520473
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local anim = Instance.new("Animation")
+anim.AnimationId = "rbxassetid://" .. animationId
+local track = humanoid:LoadAnimation(anim)
+track:Play()
+        NotifyAll()
+    end
+})
+
+
+
+
+
+
+
+
+
+--Others emotos
 local Tab1 = MainSection:Tab({
-    Title = "Emotes R15",
+    Title = "All Emotes R15",
     Icon = "user",
 })
 
@@ -199,54 +285,6 @@ track:Play()
 })
 
 Tab1:Button({
-    Title = "Hollow Purple",
-    Desc = "By-MIYKO",
-    Callback = function()
-        local animationId = 93612961664824
-local player = game.Players.LocalPlayer
-local character = player.Character or player.CharacterAdded:Wait()
-local humanoid = character:WaitForChild("Humanoid")
-local anim = Instance.new("Animation")
-anim.AnimationId = "rbxassetid://" .. animationId
-local track = humanoid:LoadAnimation(anim)
-track:Play()
-        NotifyAll()
-    end
-})
-
-Tab1:Button({
-    Title = "Gojo Stance",
-    Desc = "By-MIYKO",
-    Callback = function()
-        local animationId = 76342783952866
-local player = game.Players.LocalPlayer
-local character = player.Character or player.CharacterAdded:Wait()
-local humanoid = character:WaitForChild("Humanoid")
-local anim = Instance.new("Animation")
-anim.AnimationId = "rbxassetid://" .. animationId
-local track = humanoid:LoadAnimation(anim)
-track:Play()
-        NotifyAll()
-    end
-})
-
-Tab1:Button({
-    Title = "Fornite (Default Dance)",
-    Desc = "By-MIYKO",
-    Callback = function()
-        local animationId = 101011728520473
-local player = game.Players.LocalPlayer
-local character = player.Character or player.CharacterAdded:Wait()
-local humanoid = character:WaitForChild("Humanoid")
-local anim = Instance.new("Animation")
-anim.AnimationId = "rbxassetid://" .. animationId
-local track = humanoid:LoadAnimation(anim)
-track:Play()
-        NotifyAll()
-    end
-})
-
-Tab1:Button({
     Title = "Come Here",
     Desc = "By-MIYKO",
     Callback = function()
@@ -279,10 +317,10 @@ track:Play()
 })
 
 Tab1:Button({
-    Title = "Hakari Dance",
+    Title = "Idle Mirage",
     Desc = "By-MIYKO",
     Callback = function()
-        local animationId = 86208454108756
+        local animationId = 115334992181298
 local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
 local humanoid = character:WaitForChild("Humanoid")
@@ -295,10 +333,186 @@ track:Play()
 })
 
 Tab1:Button({
-    Title = "Idle Mirage",
+    Title = "Gojo Floating",
     Desc = "By-MIYKO",
     Callback = function()
-        local animationId = 115334992181298
+        local animationId = 109030594660124
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local anim = Instance.new("Animation")
+anim.AnimationId = "rbxassetid://" .. animationId
+local track = humanoid:LoadAnimation(anim)
+track:Play()
+        NotifyAll()
+    end
+})
+
+Tab1:Button({
+    Title = "Stylish Floating",
+    Desc = "By-MIYKO",
+    Callback = function()
+        local animationId = 112089880074848
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local anim = Instance.new("Animation")
+anim.AnimationId = "rbxassetid://" .. animationId
+local track = humanoid:LoadAnimation(anim)
+track:Play()
+        NotifyAll()
+    end
+})
+
+Tab1:Button({
+    Title = "Bubbly Sit",
+    Desc = "By-MIYKO",
+    Callback = function()
+        local animationId = 93120341268524
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local anim = Instance.new("Animation")
+anim.AnimationId = "rbxassetid://" .. animationId
+local track = humanoid:LoadAnimation(anim)
+track:Play()
+        NotifyAll()
+    end
+})
+
+Tab1:Button({
+    Title = "Take The L",
+    Desc = "By-MIYKO",
+    Callback = function()
+        local animationId = 108354308301694
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local anim = Instance.new("Animation")
+anim.AnimationId = "rbxassetid://" .. animationId
+local track = humanoid:LoadAnimation(anim)
+track:Play()
+        NotifyAll()
+    end
+})
+
+Tab1:Button({
+    Title = "Biblically Accurate Emote",
+    Desc = "By-MIYKO",
+    Callback = function()
+        local animationId = 109873544976020
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local anim = Instance.new("Animation")
+anim.AnimationId = "rbxassetid://" .. animationId
+local track = humanoid:LoadAnimation(anim)
+track:Play()
+        NotifyAll()
+    end
+})
+
+Tab1:Button({
+    Title = "Gangnam Style",
+    Desc = "By-MIYKO",
+    Callback = function()
+        local animationId = 129764254213842
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local anim = Instance.new("Animation")
+anim.AnimationId = "rbxassetid://" .. animationId
+local track = humanoid:LoadAnimation(anim)
+track:Play()
+        NotifyAll()
+    end
+})
+
+Tab1:Button({
+    Title = "Little Obbyist",
+    Desc = "By-MIYKO",
+    Callback = function()
+        local animationId = 115569573258316
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local anim = Instance.new("Animation")
+anim.AnimationId = "rbxassetid://" .. animationId
+local track = humanoid:LoadAnimation(anim)
+track:Play()
+        NotifyAll()
+    end
+})
+
+Tab1:Button({
+    Title = "Griddy",
+    Desc = "By-MIYKO",
+    Callback = function()
+        local animationId = 121966805049108
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local anim = Instance.new("Animation")
+anim.AnimationId = "rbxassetid://" .. animationId
+local track = humanoid:LoadAnimation(anim)
+track:Play()
+        NotifyAll()
+    end
+})
+
+Tab1:Button({
+    Title = "Cute Sit",
+    Desc = "By-MIYKO",
+    Callback = function()
+        local animationId = 97459465855185
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local anim = Instance.new("Animation")
+anim.AnimationId = "rbxassetid://" .. animationId
+local track = humanoid:LoadAnimation(anim)
+track:Play()
+        NotifyAll()
+    end
+})
+
+Tab1:Button({
+    Title = "Tank",
+    Desc = "By-MIYKO",
+    Callback = function()
+        local animationId = 94915612757079
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local anim = Instance.new("Animation")
+anim.AnimationId = "rbxassetid://" .. animationId
+local track = humanoid:LoadAnimation(anim)
+track:Play()
+        NotifyAll()
+    end
+})
+
+Tab1:Button({
+    Title = "Acelerada",
+    Desc = "By-MIYKO",
+    Callback = function()
+        local animationId = 103360497719320
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local anim = Instance.new("Animation")
+anim.AnimationId = "rbxassetid://" .. animationId
+local track = humanoid:LoadAnimation(anim)
+track:Play()
+        NotifyAll()
+    end
+})
+
+Tab1:Button({
+    Title = "Popular",
+    Desc = "By-MIYKO",
+    Callback = function()
+        local animationId = 93062298566806
 local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
 local humanoid = character:WaitForChild("Humanoid")
@@ -340,8 +554,36 @@ end
     end
 })
 
+local Re= Window:Section({ Title = "Return To The Principal Page" })
+
+local RR = Re:Tab({
+    Title = "EBH",
+    Icon = "user",
+})
+
+RR:Button({
+    Title = "Goto Exploiters Basement Hub",
+    Desc = "By Lilith, MIYKO & MUPET",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/MIYKOtuff/Tuff/refs/heads/main/EXPLOITERS%20BASEMENT"))()
+        NotifyAll()
+    end
+})
+
 WindUI:Notify({
     Title = "EBH (Emotes R15)",
     Content = "By MIYKO",
+    Icon = "check"
+})
+
+WindUI:Notify({
+    Title = "Total Emotes",
+    Content = "16",
+    Icon = "check"
+})
+
+WindUI:Notify({
+    Title = "Important",
+    Content = "Wait For More Updates :3",
     Icon = "check"
 })
