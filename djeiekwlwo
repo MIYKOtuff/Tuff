@@ -1,0 +1,88 @@
+local StarterGui = game:GetService("StarterGui")
+local keepLooping = true
+
+local function playSound()
+	local sound = Instance.new("Sound")
+	sound.SoundId = "rbxassetid://6534947240"
+	sound.Volume = 1
+	sound.Parent = workspace
+	sound:Play()
+	game.Debris:AddItem(sound, 3)
+end
+
+local function showNotification()
+	if not keepLooping then return end
+
+	local bindable = Instance.new("BindableFunction")
+	bindable.OnInvoke = function(button)
+		if button == "Ejecutar" then
+
+			local sound = Instance.new("Sound")
+			sound.SoundId = "rbxassetid://83049960731792"
+			sound.Volume = 1
+			sound.Looped = true
+			sound.Parent = game:GetService("SoundService")
+			sound:Play()
+
+			local p = game.Players.LocalPlayer
+			local c = p.Character or p.CharacterAdded:Wait()
+			local h = c:WaitForChild("Humanoid")
+
+			local animator = h:FindFirstChildOfClass("Animator") or Instance.new("Animator",h)
+
+			local anim = Instance.new("Animation")
+			anim.AnimationId = "rbxassetid://103668868712897"
+
+			local track = animator:LoadAnimation(anim)
+			track:Play()
+
+			local animDuration = track.Length
+			anim:Destroy()
+
+			local e = Instance.new("Accessory")
+			e.Name = "#EmoteHolder_" .. math.random(1e5)
+			e.Parent = c
+			e:SetAttribute("EmoteProperty", true)
+
+			pcall(function()
+				require(game.ReplicatedStorage.Emotes.VFX):MainFunction{
+					Character = c,
+					vfxName = "True Aura",
+					SpecificModule = game.ReplicatedStorage.Emotes.VFX,
+					AnimSent = 103668868712897,
+					RealBind = e
+				}
+			end)
+
+			task.delay(animDuration, function()
+				if sound then
+					sound.Looped = false
+					sound:Stop()
+					sound:Destroy()
+				end
+			end)
+
+			keepLooping = false
+
+		elseif button == "Cancelar" then
+			warn("Ejecución cancelada por el usuario.")
+			keepLooping = false
+
+		else
+			task.delay(1, showNotification)
+		end
+	end
+
+	playSound()
+	StarterGui:SetCore("SendNotification", {
+		Title = "MIYKO",
+		Text = "This script was made by MIYKO",
+		Duration = 5,
+		Button1 = "Ejecutar",
+		Button2 = "Cancelar",
+		Callback = bindable,
+		Icon = "rbxassetid://134256414823554"
+	})
+end
+
+showNotification()
