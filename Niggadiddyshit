@@ -1,0 +1,415 @@
+local UI1 = loadstring(game:HttpGet("https://raw.githubusercontent.com/x2zu/OPEN-SOURCE-UI-ROBLOX/refs/heads/main/X2ZU%20UI%20ROBLOX%20OPEN%20SOURCE/DummyUi-leak-by-x2zu/fetching-main/Tools/Framework.luau"))()
+
+local Win1 = UI1:Window({
+    Title = "Exploiters Paradise",
+    Desc = "TSB Free Emotes",
+    Icon = 96482086458333,
+    Theme = "Dark",
+    Config = {
+        Keybind = Enum.KeyCode.LeftControl,
+        Size = UDim2.new(0, 500, 0, 400)
+    },
+    CloseUIButton = {
+        Enabled = true,
+        Text = "Emotes"
+    }
+})
+
+local function NotifyAll()
+    Win1:Notify({
+    Title = "Emotes By",
+    Desc = "MIYKO & Lilith",
+    Time = 4
+})
+end
+
+local Tab1 = Win1:Tab({Title = "Emotes", Icon = "user"})
+
+Tab1:Section({Title = "Emotes"})
+
+Tab1:Button({
+    Title = "Anything To Look Cool",
+    Desc = "Free Emote",
+    Callback = function()
+loadstring(game:HttpGet("https://arch-http.vercel.app/files/Anything To Look Cool"))()
+NotifyAll()
+    end
+})
+
+Tab1:Button({
+    Title = "Take The L",
+    Desc = "Free Emote",
+    Callback = function()
+local p = game.Players.LocalPlayer
+local c, h = p.Character, p.Character:WaitForChild("Humanoid")
+local a = Instance.new("Animation")
+a.AnimationId = "rbxassetid://18614546390"
+h:LoadAnimation(a):Play()
+NotifyAll()
+    end
+})
+
+Tab1:Button({
+    Title = "Cute Spin",
+    Desc = "Free Emote",
+    Callback = function()
+local p = game.Players.LocalPlayer
+local c, h = p.Character, p.Character:WaitForChild("Humanoid")
+local a = Instance.new("Animation")
+a.AnimationId = "rbxassetid://17861849696"
+h:LoadAnimation(a):Play()
+NotifyAll()
+    end
+})
+
+Tab1:Button({
+    Title = "I hate this",
+    Desc = "Free Emote",
+    Callback = function()
+loadstring(game:HttpGet("https://arch-http.vercel.app/files/I hate this"))()
+NotifyAll()
+    end
+})
+
+Tab1:Button({
+    Title = "Blood Swipe",
+    Desc = "Free Emote",
+    Callback = function()
+loadstring(game:HttpGet("https://arch-http.vercel.app/files/Blood Swipe"))()
+NotifyAll()
+    end
+})
+
+Tab1:Button({
+    Title = "Warmhup",
+    Desc = "Free Emote",
+    Callback = function()
+loadstring(game:HttpGet("https://arch-http.vercel.app/files/Warmhup"))()
+NotifyAll()
+    end
+})
+
+Tab1:Button({
+    Title = "Sit 2",
+    Desc = "Free Emote",
+    Callback = function()
+loadstring(game:HttpGet("https://arch-http.vercel.app/files/Sit 2"))()
+NotifyAll()
+    end
+})
+
+Tab1:Button({
+    Title = "Cry",
+    Desc = "Free Emote",
+    Callback = function()
+local animationId = 13874287198
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local anim = Instance.new("Animation")
+anim.AnimationId = "rbxassetid://" .. animationId
+local track = humanoid:LoadAnimation(anim)
+track:Play()
+NotifyAll()
+    end
+})
+
+Tab1:Button({
+    Title = "You Hear That?",
+    Desc = "Free Emote",
+    Callback = function()
+local animationId = 15018219692
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local anim = Instance.new("Animation")
+anim.AnimationId = "rbxassetid://" .. animationId
+local track = humanoid:LoadAnimation(anim)
+track:Play()
+NotifyAll()
+    end
+})
+
+Tab1:Button({
+    Title = "Square Up",
+    Desc = "Free Emote",
+    Callback = function()
+local animationId = 95561134536060
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local anim = Instance.new("Animation")
+anim.AnimationId = "rbxassetid://" .. animationId
+local track = humanoid:LoadAnimation(anim)
+track:Play()
+NotifyAll()
+    end
+})
+
+Tab1:Button({
+    Title = "Sit",
+    Desc = "Free Emote",
+    Callback = function()
+local animationId = 15090101157
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local anim = Instance.new("Animation")
+anim.AnimationId = "rbxassetid://" .. animationId
+local track = humanoid:LoadAnimation(anim)
+track:Play()
+NotifyAll()
+    end
+})
+
+Tab1:Button({
+    Title = "Transform",
+    Desc = "Free Emote",
+    Callback = function()
+local animationId = 95977571599797
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local anim = Instance.new("Animation")
+anim.AnimationId = "rbxassetid://" .. animationId
+local track = humanoid:LoadAnimation(anim)
+track:Play()
+NotifyAll()
+    end
+})
+
+Tab1:Button({
+    Title = "Gravity",
+    Desc = "Free Emote",
+    Callback = function()
+local animationId = 17106169665
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local anim = Instance.new("Animation")
+anim.AnimationId = "rbxassetid://" .. animationId
+local track = humanoid:LoadAnimation(anim)
+track:Play()
+NotifyAll()
+    end
+})
+
+Tab1:Button({
+    Title = "Griddy",
+    Desc = "Free Emote",
+    Callback = function()
+local animationId = 13715326691
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local anim = Instance.new("Animation")
+anim.AnimationId = "rbxassetid://" .. animationId
+local track = humanoid:LoadAnimation(anim)
+track:Play()
+NotifyAll()
+    end
+})
+
+Tab1:Button({
+    Title = "Tornado",
+    Desc = "Free Emote",
+    Callback = function()
+local animationId = 18459285150
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local anim = Instance.new("Animation")
+anim.AnimationId = "rbxassetid://" .. animationId
+local track = humanoid:LoadAnimation(anim)
+track:Play()
+NotifyAll()
+    end
+})
+
+Tab1:Button({
+    Title = "Dodge",
+    Desc = "Free Emote",
+    Callback = function()
+local animationId = 18897560632
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local anim = Instance.new("Animation")
+anim.AnimationId = "rbxassetid://" .. animationId
+local track = humanoid:LoadAnimation(anim)
+track:Play()
+NotifyAll()
+    end
+})
+
+Tab1:Button({
+    Title = "Leg",
+    Desc = "Free Emote",
+    Callback = function()
+local animationId = 18897664299
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local anim = Instance.new("Animation")
+anim.AnimationId = "rbxassetid://" .. animationId
+local track = humanoid:LoadAnimation(anim)
+track:Play()
+NotifyAll()
+    end
+})
+
+Tab1:Button({
+    Title = "Dance Party",
+    Desc = "Free Emote",
+    Callback = function()
+local animationId = 101501716447658
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local anim = Instance.new("Animation")
+anim.AnimationId = "rbxassetid://" .. animationId
+local track = humanoid:LoadAnimation(anim)
+track:Play()
+NotifyAll()
+    end
+})
+
+local Tab2 = Win1:Tab({Title = "Kill Emotes", Icon = "user"})
+
+Tab2:Section({Title = "Kill Emotes"})
+
+Tab2:Button({
+    Title = "Embers",
+    Desc = "Kill Emotes",
+    Callback = function()
+loadstring(game:HttpGet("https://arch-http.vercel.app/files/Embers Kill Emote By MIYKO"))()
+NotifyAll()
+    end
+})
+
+Tab2:Button({
+    Title = "Ruthless",
+    Desc = "Kill Emotes",
+    Callback = function()
+loadstring(game:HttpGet("https://arch-http.vercel.app/files/Ruthless Kill Emote By MIYKO"))()
+NotifyAll()
+    end
+})
+
+Tab2:Button({
+    Title = "Time Shift",
+    Desc = "Kill Emotes",
+    Callback = function()
+loadstring(game:HttpGet("https://arch-http.vercel.app/files/Time Shift Kill Emote By LilitH"))()
+NotifyAll()
+    end
+})
+
+Tab2:Button({
+    Title = "Beneath Me",
+    Desc = "Kill Emotes",
+    Callback = function()
+loadstring(game:HttpGet("https://arch-http.vercel.app/files/Beneath Me"))()
+NotifyAll()
+    end
+})
+
+Tab2:Button({
+    Title = "Last Will",
+    Desc = "Kill Emotes",
+    Callback = function()
+loadstring(game:HttpGet("https://arch-http.vercel.app/files/Last Will Limited Emote By MIYKO"))()
+NotifyAll()
+    end
+})
+
+Tab2:Button({
+    Title = "Final Spark",
+    Desc = "Kill Emotes",
+    Callback = function()
+loadstring(game:HttpGet("https://arch-http.vercel.app/files/Final Spark Limited Emote By MIYKO"))()
+NotifyAll()
+    end
+})
+
+Tab2:Button({
+    Title = "World Cutting Slash",
+    Desc = "Kill Emotes",
+    Callback = function()
+loadstring(game:HttpGet("https://arch-http.vercel.app/files/World Cutting Slash Limited Emote By Lilith"))()
+NotifyAll()
+    end
+})
+
+local Tab3 = Win1:Tab({Title = "Limited Emotes", Icon = "user"})
+
+Tab3:Section({Title = "Limited Emotes"})
+
+Tab3:Button({
+    Title = "Boundless Rage",
+    Desc = "Limited Emotes",
+    Callback = function()
+loadstring(game:HttpGet("https://arch-http.vercel.app/files/Boundless Rage Limited Emote By MIYKO"))()
+NotifyAll()
+    end
+})
+
+Tab3:Button({
+    Title = "True Aura",
+    Desc = "Limited Emotes",
+    Callback = function()
+loadstring(game:HttpGet("https://arch-http.vercel.app/files/True Aura Limited Emote By MIYKO"))()
+NotifyAll()
+    end
+})
+
+Tab3:Button({
+    Title = "Shadow Eruption",
+    Desc = "Limited Emotes",
+    Callback = function()
+loadstring(game:HttpGet("https://arch-http.vercel.app/files/Shadow Eruption Limited Emote By MIYKO"))()
+NotifyAll()
+    end
+})
+
+Tab3:Button({
+    Title = "Final Stand",
+    Desc = "Limited Emotes",
+    Callback = function()
+loadstring(game:HttpGet("https://arch-http.vercel.app/files/Final Stand Limited Emote By MIYKO"))()
+NotifyAll()
+    end
+})
+
+Tab3:Button({
+    Title = "Divine Form (Bug)",
+    Desc = "Limited Emotes",
+    Callback = function()
+loadstring(game:HttpGet("https://arch-http.vercel.app/files/Divine Form Limited Emote By MIYKO"))()
+NotifyAll()
+    end
+})
+
+Tab3:Button({
+    Title = "The Fallen",
+    Desc = "Limited Emotes",
+    Callback = function()
+loadstring(game:HttpGet("https://arch-http.vercel.app/files/The Fallen Limited Emote By MIYKO"))()
+NotifyAll()
+    end
+})
+
+Tab3:Button({
+    Title = "My Brother (Only Animation)",
+    Desc = "Limited Emotes",
+    Callback = function()
+loadstring(game:HttpGet("https://arch-http.vercel.app/files/My Brother Limited Emote By MIYKO"))()
+NotifyAll()
+    end
+})
+
+Win1:Notify({
+    Title = "EBH (TSB-Emotes)",
+    Desc = "Join to my discord pls",
+    Time = 4
+})
